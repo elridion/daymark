@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "सूरज अभी-अभी उगा है। सुबह-सवेरे।",
+  "daymark_sun_morning": "सूरज ऊपर चढ़ रहा है। सुबह।",
+  "daymark_sun_latemorning": "सूरज लगभग सिर पर है। देर सुबह।",
+  "daymark_sun_midday": "सूरज सिर पर है। दोपहर।",
+  "daymark_sun_earlyafternoon": "सूरज ढलने लगा है। दोपहर बाद।",
+  "daymark_sun_lateafternoon": "सूरज नीचे है। ढलती दोपहर।",
+  "daymark_sun_setting": "सूरज डूब रहा है। शाम।",
+  "daymark_moon_rising": "चाँद उग रहा है। रात हो रही है।",
+  "daymark_moon_night": "चाँद ऊपर चढ़ रहा है। रात।",
+  "daymark_moon_midnight": "चाँद सिर पर है। आधी रात।",
+  "daymark_moon_sinking": "चाँद ढल रहा है। पिछली रात।",
+  "daymark_moon_setting": "चाँद डूब रहा है। भोर पास है।"
+}

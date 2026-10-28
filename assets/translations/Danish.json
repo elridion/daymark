@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Solen er lige stået op. Tidlig morgen.",
+  "daymark_sun_morning": "Solen stiger. Morgen.",
+  "daymark_sun_latemorning": "Solen står næsten højest. Sen formiddag.",
+  "daymark_sun_midday": "Solen står højt. Middag.",
+  "daymark_sun_earlyafternoon": "Solen begynder at synke. Tidlig eftermiddag.",
+  "daymark_sun_lateafternoon": "Solen står lavt. Sen eftermiddag.",
+  "daymark_sun_setting": "Solen går ned. Aften.",
+  "daymark_moon_rising": "Månen står op. Natten falder på.",
+  "daymark_moon_night": "Månen stiger. Nat.",
+  "daymark_moon_midnight": "Månen står højt. Midnat.",
+  "daymark_moon_sinking": "Månen synker. De små timer.",
+  "daymark_moon_setting": "Månen går ned. Daggryet nærmer sig."
+}

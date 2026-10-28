@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "日が昇ったばかりだ。早朝。",
+  "daymark_sun_morning": "日が昇っていく。朝。",
+  "daymark_sun_latemorning": "日はもうすぐ南中する。昼前。",
+  "daymark_sun_midday": "日が高い。正午。",
+  "daymark_sun_earlyafternoon": "日が傾き始めた。昼過ぎ。",
+  "daymark_sun_lateafternoon": "日が低い。夕方前。",
+  "daymark_sun_setting": "日が沈んでいく。夕暮れ。",
+  "daymark_moon_rising": "月が昇ってくる。日暮れ。",
+  "daymark_moon_night": "月が高くなっていく。夜。",
+  "daymark_moon_midnight": "月が高い。真夜中。",
+  "daymark_moon_sinking": "月が傾いた。夜更け。",
+  "daymark_moon_setting": "月が沈んでいく。夜明けが近い。"
+}

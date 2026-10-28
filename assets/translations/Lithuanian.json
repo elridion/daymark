@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Saulė ką tik patekėjo. Ankstyvas rytas.",
+  "daymark_sun_morning": "Saulė kyla. Rytas.",
+  "daymark_sun_latemorning": "Saulė beveik zenite. Vėlyvas priešpietis.",
+  "daymark_sun_midday": "Saulė aukštai. Vidurdienis.",
+  "daymark_sun_earlyafternoon": "Saulė ima leistis. Ankstyva popietė.",
+  "daymark_sun_lateafternoon": "Saulė žemai. Vėlyva popietė.",
+  "daymark_sun_setting": "Saulė leidžiasi. Vakaras.",
+  "daymark_moon_rising": "Mėnulis teka. Užeina naktis.",
+  "daymark_moon_night": "Mėnulis kyla. Naktis.",
+  "daymark_moon_midnight": "Mėnulis aukštai. Vidurnaktis.",
+  "daymark_moon_sinking": "Mėnulis leidžiasi. Paryčiai.",
+  "daymark_moon_setting": "Mėnulis nusileidžia. Aušra arti."
+}

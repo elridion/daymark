@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "ดวงอาทิตย์เพิ่งขึ้น ยามเช้าตรู่",
+  "daymark_sun_morning": "ดวงอาทิตย์กำลังสูงขึ้น ยามเช้า",
+  "daymark_sun_latemorning": "ดวงอาทิตย์เกือบตรงศีรษะ ยามสาย",
+  "daymark_sun_midday": "ดวงอาทิตย์อยู่สูง เที่ยงวัน",
+  "daymark_sun_earlyafternoon": "ดวงอาทิตย์เริ่มคล้อยต่ำ ยามบ่าย",
+  "daymark_sun_lateafternoon": "ดวงอาทิตย์อยู่ต่ำ ยามบ่ายแก่",
+  "daymark_sun_setting": "ดวงอาทิตย์กำลังตก ยามเย็น",
+  "daymark_moon_rising": "ดวงจันทร์กำลังขึ้น ค่ำแล้ว",
+  "daymark_moon_night": "ดวงจันทร์กำลังสูงขึ้น ยามค่ำคืน",
+  "daymark_moon_midnight": "ดวงจันทร์อยู่สูง เที่ยงคืน",
+  "daymark_moon_sinking": "ดวงจันทร์คล้อยต่ำ ยามดึก",
+  "daymark_moon_setting": "ดวงจันทร์กำลังตก ใกล้รุ่งสาง"
+}

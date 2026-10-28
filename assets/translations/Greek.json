@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Ο ήλιος μόλις ανέτειλε. Νωρίς το πρωί.",
+  "daymark_sun_morning": "Ο ήλιος ανεβαίνει. Πρωί.",
+  "daymark_sun_latemorning": "Ο ήλιος είναι σχεδόν στο ζενίθ. Αργά το πρωί.",
+  "daymark_sun_midday": "Ο ήλιος είναι ψηλά. Μεσημέρι.",
+  "daymark_sun_earlyafternoon": "Ο ήλιος αρχίζει να γέρνει. Νωρίς το απόγευμα.",
+  "daymark_sun_lateafternoon": "Ο ήλιος είναι χαμηλά. Αργά το απόγευμα.",
+  "daymark_sun_setting": "Ο ήλιος δύει. Βράδυ.",
+  "daymark_moon_rising": "Το φεγγάρι ανατέλλει. Πέφτει η νύχτα.",
+  "daymark_moon_night": "Το φεγγάρι ανεβαίνει. Νύχτα.",
+  "daymark_moon_midnight": "Το φεγγάρι είναι ψηλά. Μεσάνυχτα.",
+  "daymark_moon_sinking": "Το φεγγάρι γέρνει. Μικρές ώρες.",
+  "daymark_moon_setting": "Το φεγγάρι δύει. Η αυγή πλησιάζει."
+}

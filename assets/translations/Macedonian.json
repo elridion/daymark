@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Сонцето штотуку изгреа. Рано утро.",
+  "daymark_sun_morning": "Сонцето се искачува. Утро.",
+  "daymark_sun_latemorning": "Сонцето е речиси во зенитот. Доцна претпладне.",
+  "daymark_sun_midday": "Сонцето е високо. Пладне.",
+  "daymark_sun_earlyafternoon": "Сонцето почнува да се спушта. Рано попладне.",
+  "daymark_sun_lateafternoon": "Сонцето е ниско. Доцна попладне.",
+  "daymark_sun_setting": "Сонцето заоѓа. Вечер.",
+  "daymark_moon_rising": "Месечината изгрева. Паѓа ноќ.",
+  "daymark_moon_night": "Месечината се искачува. Ноќ.",
+  "daymark_moon_midnight": "Месечината е високо. Полноќ.",
+  "daymark_moon_sinking": "Месечината се спушта. Доцна ноќ.",
+  "daymark_moon_setting": "Месечината заоѓа. Зората е блиску."
+}

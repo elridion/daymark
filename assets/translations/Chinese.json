@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "太阳刚刚升起。清晨。",
+  "daymark_sun_morning": "太阳正在升高。早上。",
+  "daymark_sun_latemorning": "太阳快到最高处了。上午。",
+  "daymark_sun_midday": "太阳高悬。正午。",
+  "daymark_sun_earlyafternoon": "太阳开始西沉。午后。",
+  "daymark_sun_lateafternoon": "太阳低垂。傍晚前。",
+  "daymark_sun_setting": "太阳正在落下。黄昏。",
+  "daymark_moon_rising": "月亮正在升起。入夜。",
+  "daymark_moon_night": "月亮正在升高。夜晚。",
+  "daymark_moon_midnight": "月亮高悬。午夜。",
+  "daymark_moon_sinking": "月亮西沉。深夜。",
+  "daymark_moon_setting": "月亮正在落下。黎明将至。"
+}

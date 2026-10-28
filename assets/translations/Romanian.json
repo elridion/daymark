@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Soarele tocmai a răsărit. Dimineață devreme.",
+  "daymark_sun_morning": "Soarele urcă. Dimineață.",
+  "daymark_sun_latemorning": "Soarele e aproape la amiază. Târziu în dimineață.",
+  "daymark_sun_midday": "Soarele stă sus. Amiază.",
+  "daymark_sun_earlyafternoon": "Soarele începe să coboare. Început de după-amiază.",
+  "daymark_sun_lateafternoon": "Soarele e jos. Târziu după-amiază.",
+  "daymark_sun_setting": "Soarele apune. Seară.",
+  "daymark_moon_rising": "Luna răsare. Se lasă noaptea.",
+  "daymark_moon_night": "Luna urcă. Noapte.",
+  "daymark_moon_midnight": "Luna stă sus. Miezul nopții.",
+  "daymark_moon_sinking": "Luna coboară. Orele mici.",
+  "daymark_moon_setting": "Luna apune. Zorii sunt aproape."
+}

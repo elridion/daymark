@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "A nap épp most kelt fel. Kora reggel.",
+  "daymark_sun_morning": "A nap emelkedik. Reggel.",
+  "daymark_sun_latemorning": "A nap majdnem delel. Késő délelőtt.",
+  "daymark_sun_midday": "A nap magasan áll. Dél.",
+  "daymark_sun_earlyafternoon": "A nap süllyedni kezd. Kora délután.",
+  "daymark_sun_lateafternoon": "A nap alacsonyan jár. Késő délután.",
+  "daymark_sun_setting": "A nap lemegy. Este.",
+  "daymark_moon_rising": "A hold felkel. Leszáll az éj.",
+  "daymark_moon_night": "A hold emelkedik. Éjszaka.",
+  "daymark_moon_midnight": "A hold magasan áll. Éjfél.",
+  "daymark_moon_sinking": "A hold süllyed. Hajnali órák.",
+  "daymark_moon_setting": "A hold lenyugszik. Közel a hajnal."
+}

@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Güneş yeni doğdu. Sabahın erken saatleri.",
+  "daymark_sun_morning": "Güneş yükseliyor. Sabah.",
+  "daymark_sun_latemorning": "Güneş neredeyse tepede. Öğleden önce.",
+  "daymark_sun_midday": "Güneş tepede. Öğle.",
+  "daymark_sun_earlyafternoon": "Güneş alçalmaya başladı. Öğleden sonranın başı.",
+  "daymark_sun_lateafternoon": "Güneş alçakta. İkindi.",
+  "daymark_sun_setting": "Güneş batıyor. Akşam.",
+  "daymark_moon_rising": "Ay doğuyor. Gece çöküyor.",
+  "daymark_moon_night": "Ay yükseliyor. Gece.",
+  "daymark_moon_midnight": "Ay tepede. Gece yarısı.",
+  "daymark_moon_sinking": "Ay alçalıyor. Gecenin geç saatleri.",
+  "daymark_moon_setting": "Ay batıyor. Şafak yakın."
+}

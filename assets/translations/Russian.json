@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Солнце только что взошло. Раннее утро.",
+  "daymark_sun_morning": "Солнце поднимается. Утро.",
+  "daymark_sun_latemorning": "Солнце почти в зените. Позднее утро.",
+  "daymark_sun_midday": "Солнце высоко. Полдень.",
+  "daymark_sun_earlyafternoon": "Солнце начинает клониться. Ранний день.",
+  "daymark_sun_lateafternoon": "Солнце низко. Поздний день.",
+  "daymark_sun_setting": "Солнце садится. Вечер.",
+  "daymark_moon_rising": "Луна восходит. Наступает ночь.",
+  "daymark_moon_night": "Луна поднимается. Ночь.",
+  "daymark_moon_midnight": "Луна высоко. Полночь.",
+  "daymark_moon_sinking": "Луна клонится. Глубокая ночь.",
+  "daymark_moon_setting": "Луна заходит. Близок рассвет."
+}

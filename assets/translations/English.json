@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "The sun has just risen. Early morning.",
+  "daymark_sun_morning": "The sun climbs. Morning.",
+  "daymark_sun_latemorning": "The sun is nearly at its height. Late morning.",
+  "daymark_sun_midday": "The sun stands high. Midday.",
+  "daymark_sun_earlyafternoon": "The sun has begun to sink. Early afternoon.",
+  "daymark_sun_lateafternoon": "The sun hangs low. Late afternoon.",
+  "daymark_sun_setting": "The sun is setting. Evening.",
+  "daymark_moon_rising": "The moon is rising. Nightfall.",
+  "daymark_moon_night": "The moon climbs. Night.",
+  "daymark_moon_midnight": "The moon stands high. Midnight.",
+  "daymark_moon_sinking": "The moon sinks. The small hours.",
+  "daymark_moon_setting": "The moon is setting. Dawn is near."
+}

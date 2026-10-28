@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Aurinko on juuri noussut. Varhainen aamu.",
+  "daymark_sun_morning": "Aurinko nousee. Aamu.",
+  "daymark_sun_latemorning": "Aurinko on lähes korkeimmillaan. Myöhäinen aamupäivä.",
+  "daymark_sun_midday": "Aurinko on korkealla. Keskipäivä.",
+  "daymark_sun_earlyafternoon": "Aurinko alkaa laskea. Varhainen iltapäivä.",
+  "daymark_sun_lateafternoon": "Aurinko on matalalla. Myöhäinen iltapäivä.",
+  "daymark_sun_setting": "Aurinko laskee. Ilta.",
+  "daymark_moon_rising": "Kuu nousee. Yö laskeutuu.",
+  "daymark_moon_night": "Kuu nousee korkeammalle. Yö.",
+  "daymark_moon_midnight": "Kuu on korkealla. Keskiyö.",
+  "daymark_moon_sinking": "Kuu laskee. Aamuyön tunnit.",
+  "daymark_moon_setting": "Kuu laskee mailleen. Aamunkoitto on lähellä."
+}

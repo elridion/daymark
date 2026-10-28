@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Die Sonne ist gerade aufgegangen. Früher Morgen.",
+  "daymark_sun_morning": "Die Sonne steigt. Morgen.",
+  "daymark_sun_latemorning": "Die Sonne steht fast am höchsten. Später Vormittag.",
+  "daymark_sun_midday": "Die Sonne steht hoch. Mittag.",
+  "daymark_sun_earlyafternoon": "Die Sonne beginnt zu sinken. Früher Nachmittag.",
+  "daymark_sun_lateafternoon": "Die Sonne steht tief. Später Nachmittag.",
+  "daymark_sun_setting": "Die Sonne geht unter. Abend.",
+  "daymark_moon_rising": "Der Mond geht auf. Einbruch der Nacht.",
+  "daymark_moon_night": "Der Mond steigt. Nacht.",
+  "daymark_moon_midnight": "Der Mond steht hoch. Mitternacht.",
+  "daymark_moon_sinking": "Der Mond sinkt. Die frühen Stunden.",
+  "daymark_moon_setting": "Der Mond geht unter. Die Dämmerung naht."
+}

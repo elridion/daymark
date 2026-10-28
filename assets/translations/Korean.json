@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "해가 막 떠올랐다. 이른 아침.",
+  "daymark_sun_morning": "해가 오르고 있다. 아침.",
+  "daymark_sun_latemorning": "해가 거의 중천에 있다. 늦은 아침.",
+  "daymark_sun_midday": "해가 중천에 떠 있다. 정오.",
+  "daymark_sun_earlyafternoon": "해가 기울기 시작했다. 이른 오후.",
+  "daymark_sun_lateafternoon": "해가 낮게 걸려 있다. 늦은 오후.",
+  "daymark_sun_setting": "해가 지고 있다. 저녁.",
+  "daymark_moon_rising": "달이 떠오르고 있다. 해질녘.",
+  "daymark_moon_night": "달이 오르고 있다. 밤.",
+  "daymark_moon_midnight": "달이 중천에 떠 있다. 자정.",
+  "daymark_moon_sinking": "달이 기울고 있다. 깊은 밤.",
+  "daymark_moon_setting": "달이 지고 있다. 새벽이 가깝다."
+}

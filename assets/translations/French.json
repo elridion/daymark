@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Le soleil vient de se lever. Petit matin.",
+  "daymark_sun_morning": "Le soleil monte. Matin.",
+  "daymark_sun_latemorning": "Le soleil est presque à son zénith. Fin de matinée.",
+  "daymark_sun_midday": "Le soleil est haut. Midi.",
+  "daymark_sun_earlyafternoon": "Le soleil commence à descendre. Début d'après-midi.",
+  "daymark_sun_lateafternoon": "Le soleil est bas. Fin d'après-midi.",
+  "daymark_sun_setting": "Le soleil se couche. Soir.",
+  "daymark_moon_rising": "La lune se lève. Tombée de la nuit.",
+  "daymark_moon_night": "La lune monte. Nuit.",
+  "daymark_moon_midnight": "La lune est haute. Minuit.",
+  "daymark_moon_sinking": "La lune descend. Petites heures.",
+  "daymark_moon_setting": "La lune se couche. L'aube approche."
+}

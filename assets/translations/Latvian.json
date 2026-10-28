@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Saule tikko uzlēkusi. Agrs rīts.",
+  "daymark_sun_morning": "Saule kāpj augstāk. Rīts.",
+  "daymark_sun_latemorning": "Saule ir gandrīz zenītā. Vēls priekšpusdienas laiks.",
+  "daymark_sun_midday": "Saule ir augstu. Pusdienlaiks.",
+  "daymark_sun_earlyafternoon": "Saule sāk grimt. Agra pēcpusdiena.",
+  "daymark_sun_lateafternoon": "Saule ir zemu. Vēla pēcpusdiena.",
+  "daymark_sun_setting": "Saule riet. Vakars.",
+  "daymark_moon_rising": "Mēness lec. Iestājas nakts.",
+  "daymark_moon_night": "Mēness kāpj augstāk. Nakts.",
+  "daymark_moon_midnight": "Mēness ir augstu. Pusnakts.",
+  "daymark_moon_sinking": "Mēness grimst. Agras rīta stundas.",
+  "daymark_moon_setting": "Mēness riet. Rītausma ir tuvu."
+}

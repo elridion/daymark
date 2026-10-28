@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Сонце щойно зійшло. Ранній ранок.",
+  "daymark_sun_morning": "Сонце піднімається. Ранок.",
+  "daymark_sun_latemorning": "Сонце майже в зеніті. Пізній ранок.",
+  "daymark_sun_midday": "Сонце високо. Полудень.",
+  "daymark_sun_earlyafternoon": "Сонце починає хилитися. Рання пообідня пора.",
+  "daymark_sun_lateafternoon": "Сонце низько. Пізнє пообіддя.",
+  "daymark_sun_setting": "Сонце сідає. Вечір.",
+  "daymark_moon_rising": "Місяць сходить. Настає ніч.",
+  "daymark_moon_night": "Місяць піднімається. Ніч.",
+  "daymark_moon_midnight": "Місяць високо. Північ.",
+  "daymark_moon_sinking": "Місяць хилиться. Глупа ніч.",
+  "daymark_moon_setting": "Місяць заходить. Близько світанок."
+}

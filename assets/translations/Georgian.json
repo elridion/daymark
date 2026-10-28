@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "მზე ახლახან ამოვიდა. ადრეული დილა.",
+  "daymark_sun_morning": "მზე მაღლა იწევს. დილა.",
+  "daymark_sun_latemorning": "მზე თითქმის ზენიტშია. გვიანი დილა.",
+  "daymark_sun_midday": "მზე მაღლაა. შუადღე.",
+  "daymark_sun_earlyafternoon": "მზე დახრას იწყებს. ადრეული ნაშუადღევი.",
+  "daymark_sun_lateafternoon": "მზე დაბლაა. გვიანი ნაშუადღევი.",
+  "daymark_sun_setting": "მზე ჩადის. საღამო.",
+  "daymark_moon_rising": "მთვარე ამოდის. ღამე დგება.",
+  "daymark_moon_night": "მთვარე მაღლა იწევს. ღამე.",
+  "daymark_moon_midnight": "მთვარე მაღლაა. შუაღამე.",
+  "daymark_moon_sinking": "მთვარე იხრება. გვიანი ღამე.",
+  "daymark_moon_setting": "მთვარე ჩადის. განთიადი ახლოსაა."
+}

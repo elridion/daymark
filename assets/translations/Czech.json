@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Slunce právě vyšlo. Časné ráno.",
+  "daymark_sun_morning": "Slunce stoupá. Ráno.",
+  "daymark_sun_latemorning": "Slunce je téměř nejvýš. Pozdní dopoledne.",
+  "daymark_sun_midday": "Slunce stojí vysoko. Poledne.",
+  "daymark_sun_earlyafternoon": "Slunce začíná klesat. Časné odpoledne.",
+  "daymark_sun_lateafternoon": "Slunce stojí nízko. Pozdní odpoledne.",
+  "daymark_sun_setting": "Slunce zapadá. Večer.",
+  "daymark_moon_rising": "Měsíc vychází. Padá noc.",
+  "daymark_moon_night": "Měsíc stoupá. Noc.",
+  "daymark_moon_midnight": "Měsíc stojí vysoko. Půlnoc.",
+  "daymark_moon_sinking": "Měsíc klesá. Hluboká noc.",
+  "daymark_moon_setting": "Měsíc zapadá. Blíží se úsvit."
+}

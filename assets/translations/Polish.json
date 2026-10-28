@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Słońce właśnie wzeszło. Wczesny ranek.",
+  "daymark_sun_morning": "Słońce się wznosi. Ranek.",
+  "daymark_sun_latemorning": "Słońce jest prawie w zenicie. Późne przedpołudnie.",
+  "daymark_sun_midday": "Słońce stoi wysoko. Południe.",
+  "daymark_sun_earlyafternoon": "Słońce zaczyna opadać. Wczesne popołudnie.",
+  "daymark_sun_lateafternoon": "Słońce wisi nisko. Późne popołudnie.",
+  "daymark_sun_setting": "Słońce zachodzi. Wieczór.",
+  "daymark_moon_rising": "Księżyc wschodzi. Zapada noc.",
+  "daymark_moon_night": "Księżyc się wznosi. Noc.",
+  "daymark_moon_midnight": "Księżyc stoi wysoko. Północ.",
+  "daymark_moon_sinking": "Księżyc opada. Późna noc.",
+  "daymark_moon_setting": "Księżyc zachodzi. Świt jest blisko."
+}

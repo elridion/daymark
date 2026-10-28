@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Sunce je upravo izašlo. Rano jutro.",
+  "daymark_sun_morning": "Sunce se penje. Jutro.",
+  "daymark_sun_latemorning": "Sunce je gotovo u zenitu. Kasno prijepodne.",
+  "daymark_sun_midday": "Sunce stoji visoko. Podne.",
+  "daymark_sun_earlyafternoon": "Sunce počinje padati. Rano poslijepodne.",
+  "daymark_sun_lateafternoon": "Sunce stoji nisko. Kasno poslijepodne.",
+  "daymark_sun_setting": "Sunce zalazi. Večer.",
+  "daymark_moon_rising": "Mjesec izlazi. Pada noć.",
+  "daymark_moon_night": "Mjesec se penje. Noć.",
+  "daymark_moon_midnight": "Mjesec stoji visoko. Ponoć.",
+  "daymark_moon_sinking": "Mjesec pada. Sitni sati.",
+  "daymark_moon_setting": "Mjesec zalazi. Zora je blizu."
+}

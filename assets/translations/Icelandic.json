@@ -1,0 +1,14 @@
+{
+  "daymark_sun_risen": "Sólin er nýkomin upp. Snemma morguns.",
+  "daymark_sun_morning": "Sólin hækkar. Morgunn.",
+  "daymark_sun_latemorning": "Sólin er nærri hæst. Síðla morguns.",
+  "daymark_sun_midday": "Sólin er hátt á lofti. Hádegi.",
+  "daymark_sun_earlyafternoon": "Sólin er farin að lækka. Snemma síðdegis.",
+  "daymark_sun_lateafternoon": "Sólin er lágt á lofti. Síðla dags.",
+  "daymark_sun_setting": "Sólin sest. Kvöld.",
+  "daymark_moon_rising": "Tunglið rís. Nóttin skellur á.",
+  "daymark_moon_night": "Tunglið hækkar. Nótt.",
+  "daymark_moon_midnight": "Tunglið er hátt á lofti. Miðnætti.",
+  "daymark_moon_sinking": "Tunglið lækkar. Undir morgun.",
+  "daymark_moon_setting": "Tunglið sest. Dögun nálgast."
+}
