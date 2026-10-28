@@ -35,7 +35,7 @@
   <!-- Thunderstore/Hexium package: dotnet build -c Release -t:Package -->
   <PropertyGroup>
     <PackageDescription>Look at the sun or the moon to get a rough sense of the time of day.</PackageDescription>
-    <PackageWebsite>https://discord.gg/fBtGdJ6YSs</PackageWebsite>
+    <PackageWebsite>https://discord.gg/AJWrKZYBpA</PackageWebsite>
     <PackageDependencies>"ValheimModding-Jotunn-2.30.2"</PackageDependencies>
     <PackageStagingDir>$(BaseIntermediateOutputPath)package\</PackageStagingDir>
     <PackageOutputDir>$(MSBuildProjectDirectory)\dist\</PackageOutputDir>
