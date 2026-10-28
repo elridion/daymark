@@ -17,6 +17,8 @@ go to bed.
 - Look away and back to read the sky again.
 - The sun or moon must be above the horizon and in plain sight. Mountains, trees, roofs and walls
   block it, and the Mistlands' gloom hides the sky entirely.
+- No stargazing in a fight: while a creature is hunting you or you are attacking, the sky stays
+  silent. It speaks again 5 seconds after the fight is over.
 - The reading follows the sky you see, not the raw world clock, so "midday" is when the sun is
   actually at its highest.
 

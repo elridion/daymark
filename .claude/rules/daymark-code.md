@@ -20,6 +20,10 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   with no hit on a raycast against terrain, static, piece and vehicle layers, and not in an
   `m_alwaysDark` environment (Mistlands). Menus, map, inventory, text input, console and the radial
   menu suppress it.
+- Combat suppresses it: the player counts as in combat while `Player.IsTargeted()` (the signal
+  that starts vanilla's combat music) or within `CalmTime` (5 s) of their own last attack
+  (`Humanoid.m_lastCombatTimer`, protected, read through a cached `AccessTools.FieldRefAccess`).
+  The sky is read only after `CalmTime` seconds out of combat.
 - The message shows once after `GazeTime` seconds through `MessageHud.ShowMessage` (Center, not
   logged) and re-arms after the gaze has been away for a second.
 - The check runs every 0.1 s from the plugin's `Update`: keep it allocation-free.

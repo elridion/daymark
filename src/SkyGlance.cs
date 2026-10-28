@@ -1,12 +1,13 @@
+using HarmonyLib;
 using UnityEngine;
 
 namespace Daymark
 {
     /// <summary>
     /// Watches where the local player looks and, after a short steady gaze at the sun or the moon,
-    /// shows a vague time of day in the centre of the screen. The sun's direction is rebuilt from
-    /// EnvMan's own rotation formula instead of read from its light, because vanilla flips that light
-    /// to the moon's side at dusk while the sun is still in the sky.
+    /// shows a vague time of day in the centre of the screen, never during a fight. The sun's
+    /// direction is rebuilt from EnvMan's own rotation formula instead of read from its light,
+    /// because vanilla flips that light to the moon's side at dusk while the sun is still in the sky.
     /// </summary>
     internal class SkyGlance
     {
@@ -18,6 +19,13 @@ namespace Daymark
         private const float MinElevation = 0.025f;
         // Far enough to catch mountains on the horizon, near enough to stay cheap.
         private const float OcclusionRange = 1500f;
+        // Seconds without being targeted or attacking before the sky can be read again, so the
+        // message never pops up mid-fight or in the lull between two swings.
+        private const float CalmTime = 5f;
+
+        // Seconds since the player's last attack; protected on Humanoid, reset by StartAttack.
+        private static readonly AccessTools.FieldRef<Humanoid, float> s_lastCombatTimer =
+            AccessTools.FieldRefAccess<Humanoid, float>("m_lastCombatTimer");
 
         // EnvMan's sky time: 0.25 is sunrise, 0.5 midday, 0.75 sunset, 0 midnight. Vanilla rescales
         // the real clock so daylight takes 70% of the day, and this is the rescaled value the sky
@@ -41,6 +49,7 @@ namespace Daymark
         private float m_checkTimer;
         private float m_gazeTimer;
         private float m_awayTimer;
+        private float m_calmTimer;
         private bool m_told;
         private int m_occlusionMask;
 
@@ -51,7 +60,10 @@ namespace Daymark
             float dt = m_checkTimer;
             m_checkTimer = 0f;
 
-            string phase = GazedPhase();
+            Player player = Player.m_localPlayer;
+            m_calmTimer = player && InCombat(player) ? 0f : m_calmTimer + dt;
+
+            string phase = m_calmTimer >= CalmTime ? GazedPhase(player) : null;
             if (phase == null)
             {
                 m_gazeTimer = 0f;
@@ -71,9 +83,8 @@ namespace Daymark
 
         // The localization key for the time of day when the player is looking at a visible sun or
         // moon, otherwise null.
-        private string GazedPhase()
+        private string GazedPhase(Player player)
         {
-            Player player = Player.m_localPlayer;
             if (!player || player.IsDead()) return null;
             if (!EnvMan.instance || !MessageHud.instance) return null;
             if (InventoryGui.IsVisible() || Minimap.IsOpen() || Menu.IsVisible() || TextInput.IsVisible()
@@ -102,6 +113,14 @@ namespace Daymark
             if (Physics.Raycast(view.position, toBody, OcclusionRange, m_occlusionMask)) return null;
 
             return day ? Phase(time, s_sunPhaseEnds, s_sunPhases) : Phase(time < 0.25f ? time + 1f : time, s_moonPhaseEnds, s_moonPhases);
+        }
+
+        // Vanilla's own combat signal: IsTargeted is what starts the combat music (a creature that
+        // has noticed the player targets them within the last second). The player's own swings and
+        // shots count too, so attacking a creature that has not noticed yet is also a fight.
+        private static bool InCombat(Player player)
+        {
+            return player.IsTargeted() || s_lastCombatTimer(player) < CalmTime;
         }
 
         private static string Phase(float time, float[] ends, string[] phases)

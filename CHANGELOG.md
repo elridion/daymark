@@ -7,6 +7,8 @@
   is near." Seven phases by day, five by night.
 - Only works when the sun or moon is above the horizon and in plain sight: mountains, trees, roofs
   and the Mistlands' gloom hide it.
+- Stays quiet in combat: the sky can be read again 5 seconds after the last creature stops hunting
+  you and you stop attacking.
 - Gaze angle and gaze time are configurable.
 - Translated into every language Valheim offers except Abenaki.
 - Client-side only: players and servers without the mod can still play together.
