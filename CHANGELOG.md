@@ -4,7 +4,7 @@
 
 - New `DungeonPins` setting, off by default: going into a dungeon pins its entrance on your map
   with the hammer icon, named after the place when the game names it, unless a pin already marks
-  it. In worlds without a map the pins show once the map is turned on.
+  it. The game says "Pin added", as when a Vegvisir marks a boss. In worlds without a map the pins show once the map is turned on.
 
 ## 0.2.0
 

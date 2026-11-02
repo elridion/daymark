@@ -50,7 +50,9 @@ namespace Daymark
             string label = location && !string.IsNullOrEmpty(location.m_discoverLabel)
                 ? Localization.instance.Localize(location.m_discoverLabel)
                 : "";
-            Minimap.instance.AddPin(entrance, PinIcon, label, true, false);
+            // The same call a Vegvisir's answer ends in for a boss: it adds the saved pin and shows
+            // vanilla's "Pin added" message, without opening the map at it (showMap false).
+            Minimap.instance.DiscoverLocation(entrance, PinIcon, label, false);
         }
     }
 }
