@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Słońce zaczyna opadać. Wczesne popołudnie.",
   "daymark_sun_lateafternoon": "Słońce wisi nisko. Późne popołudnie.",
   "daymark_sun_setting": "Słońce zachodzi. Wieczór.",
-  "daymark_moon_rising": "Księżyc wschodzi. Zapada noc.",
-  "daymark_moon_night": "Księżyc się wznosi. Noc.",
-  "daymark_moon_midnight": "Księżyc stoi wysoko. Północ.",
-  "daymark_moon_sinking": "Księżyc opada. Późna noc.",
-  "daymark_moon_setting": "Księżyc zachodzi. Świt jest blisko."
+  "daymark_stars_rising": "Pojawiają się pierwsze gwiazdy. Zapada noc.",
+  "daymark_stars_night": "Gwiazdy krążą nad głową. Noc.",
+  "daymark_stars_midnight": "Gwiazdy świecą najjaśniej. Północ.",
+  "daymark_stars_sinking": "Gwiazdy krążą dalej. Późna noc.",
+  "daymark_stars_setting": "Gwiazdy bledną. Świt jest blisko.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "E",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "W"
 }

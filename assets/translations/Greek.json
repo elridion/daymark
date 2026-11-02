@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Ο ήλιος αρχίζει να γέρνει. Νωρίς το απόγευμα.",
   "daymark_sun_lateafternoon": "Ο ήλιος είναι χαμηλά. Αργά το απόγευμα.",
   "daymark_sun_setting": "Ο ήλιος δύει. Βράδυ.",
-  "daymark_moon_rising": "Το φεγγάρι ανατέλλει. Πέφτει η νύχτα.",
-  "daymark_moon_night": "Το φεγγάρι ανεβαίνει. Νύχτα.",
-  "daymark_moon_midnight": "Το φεγγάρι είναι ψηλά. Μεσάνυχτα.",
-  "daymark_moon_sinking": "Το φεγγάρι γέρνει. Μικρές ώρες.",
-  "daymark_moon_setting": "Το φεγγάρι δύει. Η αυγή πλησιάζει."
+  "daymark_stars_rising": "Τα πρώτα αστέρια βγαίνουν. Πέφτει η νύχτα.",
+  "daymark_stars_night": "Τα αστέρια γυρίζουν από πάνω σου. Νύχτα.",
+  "daymark_stars_midnight": "Τα αστέρια λάμπουν πιο φωτεινά από ποτέ. Μεσάνυχτα.",
+  "daymark_stars_sinking": "Τα αστέρια συνεχίζουν να γυρίζουν. Μικρές ώρες.",
+  "daymark_stars_setting": "Τα αστέρια σβήνουν. Η αυγή πλησιάζει.",
+  "daymark_compass_n": "Β",
+  "daymark_compass_e": "Α",
+  "daymark_compass_s": "Ν",
+  "daymark_compass_w": "Δ"
 }

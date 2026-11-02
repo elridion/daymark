@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Solen begynder at synke. Tidlig eftermiddag.",
   "daymark_sun_lateafternoon": "Solen står lavt. Sen eftermiddag.",
   "daymark_sun_setting": "Solen går ned. Aften.",
-  "daymark_moon_rising": "Månen står op. Natten falder på.",
-  "daymark_moon_night": "Månen stiger. Nat.",
-  "daymark_moon_midnight": "Månen står højt. Midnat.",
-  "daymark_moon_sinking": "Månen synker. De små timer.",
-  "daymark_moon_setting": "Månen går ned. Daggryet nærmer sig."
+  "daymark_stars_rising": "De første stjerner kommer frem. Natten falder på.",
+  "daymark_stars_night": "Stjernerne drejer over hovedet. Nat.",
+  "daymark_stars_midnight": "Stjernerne skinner klarest. Midnat.",
+  "daymark_stars_sinking": "Stjernerne drejer videre. De små timer.",
+  "daymark_stars_setting": "Stjernerne blegner. Daggryet nærmer sig.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "Ø",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "V"
 }

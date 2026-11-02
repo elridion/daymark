@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Soarele începe să coboare. Început de după-amiază.",
   "daymark_sun_lateafternoon": "Soarele e jos. Târziu după-amiază.",
   "daymark_sun_setting": "Soarele apune. Seară.",
-  "daymark_moon_rising": "Luna răsare. Se lasă noaptea.",
-  "daymark_moon_night": "Luna urcă. Noapte.",
-  "daymark_moon_midnight": "Luna stă sus. Miezul nopții.",
-  "daymark_moon_sinking": "Luna coboară. Orele mici.",
-  "daymark_moon_setting": "Luna apune. Zorii sunt aproape."
+  "daymark_stars_rising": "Apar primele stele. Se lasă noaptea.",
+  "daymark_stars_night": "Stelele se rotesc deasupra ta. Noapte.",
+  "daymark_stars_midnight": "Stelele strălucesc cel mai tare. Miezul nopții.",
+  "daymark_stars_sinking": "Stelele se rotesc mai departe. Orele mici.",
+  "daymark_stars_setting": "Stelele pălesc. Zorii sunt aproape.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "E",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "V"
 }

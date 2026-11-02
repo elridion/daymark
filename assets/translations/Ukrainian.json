@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Сонце починає хилитися. Рання пообідня пора.",
   "daymark_sun_lateafternoon": "Сонце низько. Пізнє пообіддя.",
   "daymark_sun_setting": "Сонце сідає. Вечір.",
-  "daymark_moon_rising": "Місяць сходить. Настає ніч.",
-  "daymark_moon_night": "Місяць піднімається. Ніч.",
-  "daymark_moon_midnight": "Місяць високо. Північ.",
-  "daymark_moon_sinking": "Місяць хилиться. Глупа ніч.",
-  "daymark_moon_setting": "Місяць заходить. Близько світанок."
+  "daymark_stars_rising": "Засвічуються перші зорі. Настає ніч.",
+  "daymark_stars_night": "Зорі кружляють над головою. Ніч.",
+  "daymark_stars_midnight": "Зорі сяють найяскравіше. Північ.",
+  "daymark_stars_sinking": "Зорі кружляють далі. Глупа ніч.",
+  "daymark_stars_setting": "Зорі тьмяніють. Близько світанок.",
+  "daymark_compass_n": "Пн",
+  "daymark_compass_e": "Сх",
+  "daymark_compass_s": "Пд",
+  "daymark_compass_w": "Зх"
 }

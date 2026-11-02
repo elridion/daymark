@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Sólin er farin að lækka. Snemma síðdegis.",
   "daymark_sun_lateafternoon": "Sólin er lágt á lofti. Síðla dags.",
   "daymark_sun_setting": "Sólin sest. Kvöld.",
-  "daymark_moon_rising": "Tunglið rís. Nóttin skellur á.",
-  "daymark_moon_night": "Tunglið hækkar. Nótt.",
-  "daymark_moon_midnight": "Tunglið er hátt á lofti. Miðnætti.",
-  "daymark_moon_sinking": "Tunglið lækkar. Undir morgun.",
-  "daymark_moon_setting": "Tunglið sest. Dögun nálgast."
+  "daymark_stars_rising": "Fyrstu stjörnurnar birtast. Nóttin skellur á.",
+  "daymark_stars_night": "Stjörnurnar snúast yfir höfði þér. Nótt.",
+  "daymark_stars_midnight": "Stjörnurnar skína skærast. Miðnætti.",
+  "daymark_stars_sinking": "Stjörnurnar snúast áfram. Undir morgun.",
+  "daymark_stars_setting": "Stjörnurnar dofna. Dögun nálgast.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "A",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "V"
 }

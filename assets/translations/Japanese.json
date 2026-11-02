@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "日が傾き始めた。昼過ぎ。",
   "daymark_sun_lateafternoon": "日が低い。夕方前。",
   "daymark_sun_setting": "日が沈んでいく。夕暮れ。",
-  "daymark_moon_rising": "月が昇ってくる。日暮れ。",
-  "daymark_moon_night": "月が高くなっていく。夜。",
-  "daymark_moon_midnight": "月が高い。真夜中。",
-  "daymark_moon_sinking": "月が傾いた。夜更け。",
-  "daymark_moon_setting": "月が沈んでいく。夜明けが近い。"
+  "daymark_stars_rising": "一番星が出てきた。日暮れ。",
+  "daymark_stars_night": "星々が頭上を巡っている。夜。",
+  "daymark_stars_midnight": "星が最も明るく輝いている。真夜中。",
+  "daymark_stars_sinking": "星々がさらに巡っていく。夜更け。",
+  "daymark_stars_setting": "星が薄れていく。夜明けが近い。",
+  "daymark_compass_n": "北",
+  "daymark_compass_e": "東",
+  "daymark_compass_s": "南",
+  "daymark_compass_w": "西"
 }

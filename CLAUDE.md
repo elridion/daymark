@@ -1,31 +1,48 @@
 # Daymark
 
 Valheim mod that shows a vague time of day ("The sun hangs low. Late afternoon.") in the centre of
-the screen when the local player looks steadily at the sun or the moon. Daymarks were the
-landmarks Norse farms read the time from by where the sun stood over them; the mod has no clock
-and no numbers on purpose. Purely client-side: no prefabs, no Harmony patches, nothing saved or
-networked.
+the screen when the local player looks steadily at the sun by day or up at the stars by night.
+Daymarks were the landmarks Norse farms read the time from by where the sun stood over them; the mod has no clock
+and no numbers on purpose. In worlds without a map (`Game.m_noMap`) the reading also brings up a
+compass strip, and from nightfall to dawn a wisp stays with the player: it floats over their bed
+at home and leads them there over land, by ship or through portals. The wisp is magic and knows
+every ship and portal; nothing is remembered or saved. Client-side: no prefabs, no Harmony
+patches, nothing saved anywhere. The one network use is optional: a client asks the server for
+the full ship and portal list, and only a server with Daymark answers.
 
 Stack, build, verification and git workflow are shared by all mods: see `../CLAUDE.md` and
 `../.claude/rules/`.
 
 ## Where things are
 
-- `src/DaymarkPlugin.cs` binds config, loads translations and calls `SkyGlance.Update` from its
-  own `Update`; `src/SkyGlance.cs` the gaze check, sun and moon direction and phase tables.
-- `assets/translations/<Language>.json` the twelve phase strings; `tools/make_icon.ps1` generates
+- `src/DaymarkPlugin.cs` binds config, loads translations and calls `SkyGlance`, `CompassStrip`
+  and `NightWisp` `Update` from its own `Update`; `src/SkyGlance.cs` the gaze check, sun
+  direction and phase tables; `src/CompassStrip.cs` the HUD compass; `src/NightWisp.cs` keeps the
+  wisp there all night.
+- `src/Navigation/`: `NavGrid.cs` the world map sampled from the world generator,
+  `RouteFinder.cs` the two-layer A* (foot and sail, with ship and portal links),
+  `WorldDirectory.cs` every ship and portal with its current connection (with the server RPC),
+  `WispGuide.cs` the wisp and its states.
+- `assets/translations/<Language>.json` the phase and compass strings; `tools/make_icon.ps1` generates
   `package/icon.png`. `hexium.json` Hexium listing metadata.
 
 ## Invariants that must not break
 
 - **Client-only.** `NetworkCompatibility(NotEnforced, VersionStrictness.None)` and Hexium
-  `install_location` `client` are deliberate exceptions to the workspace rule, because the mod
-  changes nothing other peers see. Adding gameplay or networked state would end that and needs the
-  usual `EveryoneMustHaveMod` setting.
+  `install_location` `client_opt_server` (client, server optional for the ship and portal list)
+  are deliberate exceptions to the workspace rule, because the mod changes nothing other peers
+  see. Adding gameplay or networked state would end that and needs the usual `EveryoneMustHaveMod`
+  setting. The list RPC is read-only and optional on both sides: a client works without a modded
+  server, and a server answers only clients that ask.
 - **Persisted identifiers.** Plugin GUID `elridion.daymark` and config section/key names (renaming
-  a key resets users' settings).
+  a key resets users' settings). The RPC `DaymarkDirectory` (on the wire
+  `elridion.daymark!DaymarkDirectory`, Jotunn prefixes the GUID) and its answer layout (portal
+  count, then per portal ZDOID, position, rotation, connection ZDOID; ship count, then per ship
+  ZDOID and position) must stay readable between versions once released.
 - **Docs follow code.** In the same change, `package/README.md` keeps the phase table in sync with
-  the English translations and the settings table with `DaymarkPlugin.Awake`.
+  the English translations, the "Worlds without a map" section with `CompassStrip` (runes,
+  duration) and the wisp (`NightWisp`, `WispGuide`, `RouteFinder`) and the settings table with
+  `DaymarkPlugin.Awake`.
 
 ## Art and licensing
 

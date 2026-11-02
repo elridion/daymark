@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "सूरज ढलने लगा है। दोपहर बाद।",
   "daymark_sun_lateafternoon": "सूरज नीचे है। ढलती दोपहर।",
   "daymark_sun_setting": "सूरज डूब रहा है। शाम।",
-  "daymark_moon_rising": "चाँद उग रहा है। रात हो रही है।",
-  "daymark_moon_night": "चाँद ऊपर चढ़ रहा है। रात।",
-  "daymark_moon_midnight": "चाँद सिर पर है। आधी रात।",
-  "daymark_moon_sinking": "चाँद ढल रहा है। पिछली रात।",
-  "daymark_moon_setting": "चाँद डूब रहा है। भोर पास है।"
+  "daymark_stars_rising": "पहले तारे निकल आए हैं। रात हो रही है।",
+  "daymark_stars_night": "तारे सिर के ऊपर घूम रहे हैं। रात।",
+  "daymark_stars_midnight": "तारे सबसे तेज़ चमक रहे हैं। आधी रात।",
+  "daymark_stars_sinking": "तारे घूमते जा रहे हैं। पिछली रात।",
+  "daymark_stars_setting": "तारे फीके पड़ रहे हैं। भोर पास है।",
+  "daymark_compass_n": "उ",
+  "daymark_compass_e": "पू",
+  "daymark_compass_s": "द",
+  "daymark_compass_w": "प"
 }

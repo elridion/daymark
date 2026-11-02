@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "ดวงอาทิตย์เริ่มคล้อยต่ำ ยามบ่าย",
   "daymark_sun_lateafternoon": "ดวงอาทิตย์อยู่ต่ำ ยามบ่ายแก่",
   "daymark_sun_setting": "ดวงอาทิตย์กำลังตก ยามเย็น",
-  "daymark_moon_rising": "ดวงจันทร์กำลังขึ้น ค่ำแล้ว",
-  "daymark_moon_night": "ดวงจันทร์กำลังสูงขึ้น ยามค่ำคืน",
-  "daymark_moon_midnight": "ดวงจันทร์อยู่สูง เที่ยงคืน",
-  "daymark_moon_sinking": "ดวงจันทร์คล้อยต่ำ ยามดึก",
-  "daymark_moon_setting": "ดวงจันทร์กำลังตก ใกล้รุ่งสาง"
+  "daymark_stars_rising": "ดาวดวงแรกเริ่มปรากฏ ค่ำแล้ว",
+  "daymark_stars_night": "ดวงดาวหมุนอยู่เหนือศีรษะ ยามค่ำคืน",
+  "daymark_stars_midnight": "ดวงดาวส่องแสงสว่างที่สุด เที่ยงคืน",
+  "daymark_stars_sinking": "ดวงดาวยังคงหมุนต่อไป ยามดึก",
+  "daymark_stars_setting": "ดวงดาวกำลังจางลง ใกล้รุ่งสาง",
+  "daymark_compass_n": "น",
+  "daymark_compass_e": "ออ",
+  "daymark_compass_s": "ต",
+  "daymark_compass_w": "ตก"
 }

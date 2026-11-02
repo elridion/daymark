@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Il sole comincia a calare. Primo pomeriggio.",
   "daymark_sun_lateafternoon": "Il sole è basso. Tardo pomeriggio.",
   "daymark_sun_setting": "Il sole tramonta. Sera.",
-  "daymark_moon_rising": "La luna sorge. Cala la notte.",
-  "daymark_moon_night": "La luna sale. Notte.",
-  "daymark_moon_midnight": "La luna è alta. Mezzanotte.",
-  "daymark_moon_sinking": "La luna cala. Ore piccole.",
-  "daymark_moon_setting": "La luna tramonta. L'alba è vicina."
+  "daymark_stars_rising": "Spuntano le prime stelle. Cala la notte.",
+  "daymark_stars_night": "Le stelle ruotano sopra di te. Notte.",
+  "daymark_stars_midnight": "Le stelle brillano più che mai. Mezzanotte.",
+  "daymark_stars_sinking": "Le stelle continuano a ruotare. Ore piccole.",
+  "daymark_stars_setting": "Le stelle impallidiscono. L'alba è vicina.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "E",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "O"
 }

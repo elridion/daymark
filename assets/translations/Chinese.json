@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "太阳开始西沉。午后。",
   "daymark_sun_lateafternoon": "太阳低垂。傍晚前。",
   "daymark_sun_setting": "太阳正在落下。黄昏。",
-  "daymark_moon_rising": "月亮正在升起。入夜。",
-  "daymark_moon_night": "月亮正在升高。夜晚。",
-  "daymark_moon_midnight": "月亮高悬。午夜。",
-  "daymark_moon_sinking": "月亮西沉。深夜。",
-  "daymark_moon_setting": "月亮正在落下。黎明将至。"
+  "daymark_stars_rising": "第一批星星出现了。入夜。",
+  "daymark_stars_night": "星辰在头顶转动。夜晚。",
+  "daymark_stars_midnight": "星光最为明亮。午夜。",
+  "daymark_stars_sinking": "星辰继续转动。深夜。",
+  "daymark_stars_setting": "星光渐渐暗淡。黎明将至。",
+  "daymark_compass_n": "北",
+  "daymark_compass_e": "东",
+  "daymark_compass_s": "南",
+  "daymark_compass_w": "西"
 }

@@ -4,10 +4,12 @@ using UnityEngine;
 namespace Daymark
 {
     /// <summary>
-    /// Watches where the local player looks and, after a short steady gaze at the sun or the moon,
-    /// shows a vague time of day in the centre of the screen, never during a fight. The sun's
-    /// direction is rebuilt from EnvMan's own rotation formula instead of read from its light,
-    /// because vanilla flips that light to the moon's side at dusk while the sun is still in the sky.
+    /// Watches where the local player looks and, after a short steady gaze at the sun by day or up at
+    /// the stars by night, shows a vague time of day in the centre of the screen, never during a
+    /// fight; in worlds without a map it also brings up the compass. The sun's direction is rebuilt
+    /// from EnvMan's own rotation formula instead of read from its light, because vanilla flips that
+    /// light at dusk while the sun is still in the sky. The moon is not used: the skybox draws it
+    /// somewhere other than opposite the sun, which is where an earlier version looked for it.
     /// </summary>
     internal class SkyGlance
     {
@@ -17,11 +19,15 @@ namespace Daymark
         private const float RearmTime = 1f;
         // Sine of the lowest elevation that counts as in the sky (about 1.5 degrees).
         private const float MinElevation = 0.025f;
+        // Sine of how far up the player must look to be gazing at the stars (about 35 degrees).
+        private const float StarElevation = 0.57f;
         // Far enough to catch mountains on the horizon, near enough to stay cheap.
         private const float OcclusionRange = 1500f;
         // Seconds without being targeted or attacking before the sky can be read again, so the
         // message never pops up mid-fight or in the lull between two swings.
         private const float CalmTime = 5f;
+        // Room for every hit along one sight line through a forest.
+        private const int MaxHits = 32;
 
         // Seconds since the player's last attack; protected on Humanoid, reset by StartAttack.
         private static readonly AccessTools.FieldRef<Humanoid, float> s_lastCombatTimer =
@@ -39,19 +45,26 @@ namespace Daymark
         };
 
         // Night phases measured from sunset, wrapping past midnight (sky time + 1 after midnight).
-        private static readonly float[] s_moonPhaseEnds = { 0.82f, 0.95f, 1.05f, 1.18f, 1.25f };
-        private static readonly string[] s_moonPhases =
+        private static readonly float[] s_starPhaseEnds = { 0.82f, 0.95f, 1.05f, 1.18f, 1.25f };
+        private static readonly string[] s_starPhases =
         {
-            "$daymark_moon_rising", "$daymark_moon_night", "$daymark_moon_midnight",
-            "$daymark_moon_sinking", "$daymark_moon_setting",
+            "$daymark_stars_rising", "$daymark_stars_night", "$daymark_stars_midnight",
+            "$daymark_stars_sinking", "$daymark_stars_setting",
         };
 
+        private readonly CompassStrip m_compass;
         private float m_checkTimer;
         private float m_gazeTimer;
         private float m_awayTimer;
         private float m_calmTimer;
         private bool m_told;
         private int m_occlusionMask;
+        private readonly RaycastHit[] m_hits = new RaycastHit[MaxHits];
+
+        public SkyGlance(CompassStrip compass)
+        {
+            m_compass = compass;
+        }
 
         public void Update()
         {
@@ -78,11 +91,13 @@ namespace Daymark
             if (m_gazeTimer < DaymarkPlugin.GazeTime.Value) return;
 
             m_told = true;
+            // Worlds without a map get a compass to find the way.
+            if (Game.m_noMap) m_compass.Show();
             MessageHud.instance.ShowMessage(MessageHud.MessageType.Center, phase, log: false);
         }
 
-        // The localization key for the time of day when the player is looking at a visible sun or
-        // moon, otherwise null.
+        // The localization key for the time of day when the player is looking at the visible sun by
+        // day or up into open night sky, otherwise null.
         private string GazedPhase(Player player)
         {
             if (!player || player.IsDead()) return null;
@@ -98,21 +113,49 @@ namespace Daymark
 
             float time = EnvMan.instance.GetDayFraction();
             bool day = time >= 0.25f && time < 0.75f;
-            Quaternion sky = Quaternion.Euler(-90f + env.m_sunAngle, 0f, 0f) * Quaternion.Euler(0f, -90f, 0f)
-                * Quaternion.Euler(-90f + 360f * time, 0f, 0f);
-            // The light shines from the sun, so the sun lies opposite its forward; the moon is the
-            // flipped light vanilla uses at night, straight across the sky from the sun.
-            Vector3 toBody = day ? -(sky * Vector3.forward) : sky * Vector3.forward;
-            if (toBody.y < MinElevation) return null;
-
             Transform view = camera.transform;
-            if (Vector3.Angle(view.forward, toBody) > DaymarkPlugin.GazeAngle.Value) return null;
+            Vector3 toSky;
+            if (day)
+            {
+                Quaternion sky = Quaternion.Euler(-90f + env.m_sunAngle, 0f, 0f) * Quaternion.Euler(0f, -90f, 0f)
+                    * Quaternion.Euler(-90f + 360f * time, 0f, 0f);
+                // The light shines from the sun, so the sun lies opposite its forward.
+                toSky = -(sky * Vector3.forward);
+                if (toSky.y < MinElevation) return null;
+                if (Vector3.Angle(view.forward, toSky) > DaymarkPlugin.GazeAngle.Value) return null;
+            }
+            else
+            {
+                // Stars fill the whole night sky, so any steady look well upwards counts.
+                toSky = view.forward;
+                if (toSky.y < StarElevation) return null;
+            }
 
+            if (Blocked(view.position, toSky)) return null;
+
+            return day ? Phase(time, s_sunPhaseEnds, s_sunPhases) : Phase(time < 0.25f ? time + 1f : time, s_starPhaseEnds, s_starPhases);
+        }
+
+        // Terrain, rocks, buildings and ships hide the sky; trees and bushes do not. A crown is one
+        // solid collider, so it hid the sky under any canopy, and at a low sun a forest on the
+        // horizon hid it too, while in the game the sky shows through the leaves.
+        private bool Blocked(Vector3 from, Vector3 direction)
+        {
             if (m_occlusionMask == 0)
                 m_occlusionMask = LayerMask.GetMask("Default", "static_solid", "Default_small", "piece", "terrain", "vehicle");
-            if (Physics.Raycast(view.position, toBody, OcclusionRange, m_occlusionMask)) return null;
+            int count = Physics.RaycastNonAlloc(from, direction, m_hits, OcclusionRange, m_occlusionMask);
+            // A full buffer may have left a solid hit out behind all that vegetation.
+            if (count == m_hits.Length) return true;
+            for (int i = 0; i < count; i++)
+                if (!Vegetation(m_hits[i].collider)) return true;
+            return false;
+        }
 
-            return day ? Phase(time, s_sunPhaseEnds, s_sunPhases) : Phase(time < 0.25f ? time + 1f : time, s_moonPhaseEnds, s_moonPhases);
+        private static bool Vegetation(Collider collider)
+        {
+            if (collider.GetComponentInParent<TreeBase>()) return true;
+            var destructible = collider.GetComponentInParent<Destructible>();
+            return destructible && destructible.m_destructibleType == DestructibleType.Tree;
         }
 
         // Vanilla's own combat signal: IsTargeted is what starts the combat music (a creature that

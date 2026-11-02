@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Saule sāk grimt. Agra pēcpusdiena.",
   "daymark_sun_lateafternoon": "Saule ir zemu. Vēla pēcpusdiena.",
   "daymark_sun_setting": "Saule riet. Vakars.",
-  "daymark_moon_rising": "Mēness lec. Iestājas nakts.",
-  "daymark_moon_night": "Mēness kāpj augstāk. Nakts.",
-  "daymark_moon_midnight": "Mēness ir augstu. Pusnakts.",
-  "daymark_moon_sinking": "Mēness grimst. Agras rīta stundas.",
-  "daymark_moon_setting": "Mēness riet. Rītausma ir tuvu."
+  "daymark_stars_rising": "Parādās pirmās zvaigznes. Iestājas nakts.",
+  "daymark_stars_night": "Zvaigznes griežas virs galvas. Nakts.",
+  "daymark_stars_midnight": "Zvaigznes mirdz visspožāk. Pusnakts.",
+  "daymark_stars_sinking": "Zvaigznes griežas tālāk. Agras rīta stundas.",
+  "daymark_stars_setting": "Zvaigznes bālē. Rītausma ir tuvu.",
+  "daymark_compass_n": "Z",
+  "daymark_compass_e": "A",
+  "daymark_compass_s": "D",
+  "daymark_compass_w": "R"
 }

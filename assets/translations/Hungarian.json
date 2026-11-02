@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "A nap süllyedni kezd. Kora délután.",
   "daymark_sun_lateafternoon": "A nap alacsonyan jár. Késő délután.",
   "daymark_sun_setting": "A nap lemegy. Este.",
-  "daymark_moon_rising": "A hold felkel. Leszáll az éj.",
-  "daymark_moon_night": "A hold emelkedik. Éjszaka.",
-  "daymark_moon_midnight": "A hold magasan áll. Éjfél.",
-  "daymark_moon_sinking": "A hold süllyed. Hajnali órák.",
-  "daymark_moon_setting": "A hold lenyugszik. Közel a hajnal."
+  "daymark_stars_rising": "Feltűnnek az első csillagok. Leszáll az éj.",
+  "daymark_stars_night": "A csillagok a fejed fölött forognak. Éjszaka.",
+  "daymark_stars_midnight": "A csillagok a legfényesebben ragyognak. Éjfél.",
+  "daymark_stars_sinking": "A csillagok tovább forognak. Hajnali órák.",
+  "daymark_stars_setting": "A csillagok halványulnak. Közel a hajnal.",
+  "daymark_compass_n": "É",
+  "daymark_compass_e": "K",
+  "daymark_compass_s": "D",
+  "daymark_compass_w": "Ny"
 }

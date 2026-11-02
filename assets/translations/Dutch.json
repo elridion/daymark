@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "De zon begint te zakken. Vroege namiddag.",
   "daymark_sun_lateafternoon": "De zon staat laag. Late namiddag.",
   "daymark_sun_setting": "De zon gaat onder. Avond.",
-  "daymark_moon_rising": "De maan komt op. Het wordt nacht.",
-  "daymark_moon_night": "De maan klimt. Nacht.",
-  "daymark_moon_midnight": "De maan staat hoog. Middernacht.",
-  "daymark_moon_sinking": "De maan zakt. De kleine uurtjes.",
-  "daymark_moon_setting": "De maan gaat onder. De dageraad is nabij."
+  "daymark_stars_rising": "De eerste sterren verschijnen. Het wordt nacht.",
+  "daymark_stars_night": "De sterren draaien boven je hoofd. Nacht.",
+  "daymark_stars_midnight": "De sterren schijnen op hun helderst. Middernacht.",
+  "daymark_stars_sinking": "De sterren draaien verder. De kleine uurtjes.",
+  "daymark_stars_setting": "De sterren verbleken. De dageraad is nabij.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "O",
+  "daymark_compass_s": "Z",
+  "daymark_compass_w": "W"
 }

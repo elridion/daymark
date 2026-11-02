@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Saulė ima leistis. Ankstyva popietė.",
   "daymark_sun_lateafternoon": "Saulė žemai. Vėlyva popietė.",
   "daymark_sun_setting": "Saulė leidžiasi. Vakaras.",
-  "daymark_moon_rising": "Mėnulis teka. Užeina naktis.",
-  "daymark_moon_night": "Mėnulis kyla. Naktis.",
-  "daymark_moon_midnight": "Mėnulis aukštai. Vidurnaktis.",
-  "daymark_moon_sinking": "Mėnulis leidžiasi. Paryčiai.",
-  "daymark_moon_setting": "Mėnulis nusileidžia. Aušra arti."
+  "daymark_stars_rising": "Pasirodo pirmosios žvaigždės. Užeina naktis.",
+  "daymark_stars_night": "Žvaigždės sukasi virš galvos. Naktis.",
+  "daymark_stars_midnight": "Žvaigždės šviečia ryškiausiai. Vidurnaktis.",
+  "daymark_stars_sinking": "Žvaigždės sukasi toliau. Paryčiai.",
+  "daymark_stars_setting": "Žvaigždės blėsta. Aušra arti.",
+  "daymark_compass_n": "Š",
+  "daymark_compass_e": "R",
+  "daymark_compass_s": "P",
+  "daymark_compass_w": "V"
 }

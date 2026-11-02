@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Солнце начинает клониться. Ранний день.",
   "daymark_sun_lateafternoon": "Солнце низко. Поздний день.",
   "daymark_sun_setting": "Солнце садится. Вечер.",
-  "daymark_moon_rising": "Луна восходит. Наступает ночь.",
-  "daymark_moon_night": "Луна поднимается. Ночь.",
-  "daymark_moon_midnight": "Луна высоко. Полночь.",
-  "daymark_moon_sinking": "Луна клонится. Глубокая ночь.",
-  "daymark_moon_setting": "Луна заходит. Близок рассвет."
+  "daymark_stars_rising": "Зажигаются первые звёзды. Наступает ночь.",
+  "daymark_stars_night": "Звёзды кружат над головой. Ночь.",
+  "daymark_stars_midnight": "Звёзды сияют ярче всего. Полночь.",
+  "daymark_stars_sinking": "Звёзды кружат дальше. Глубокая ночь.",
+  "daymark_stars_setting": "Звёзды меркнут. Близок рассвет.",
+  "daymark_compass_n": "С",
+  "daymark_compass_e": "В",
+  "daymark_compass_s": "Ю",
+  "daymark_compass_w": "З"
 }

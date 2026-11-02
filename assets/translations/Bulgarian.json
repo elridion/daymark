@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Слънцето започва да се снижава. Ранен следобед.",
   "daymark_sun_lateafternoon": "Слънцето е ниско. Късен следобед.",
   "daymark_sun_setting": "Слънцето залязва. Вечер.",
-  "daymark_moon_rising": "Луната изгрява. Пада нощ.",
-  "daymark_moon_night": "Луната се издига. Нощ.",
-  "daymark_moon_midnight": "Луната е високо. Полунощ.",
-  "daymark_moon_sinking": "Луната се снижава. Късна нощ.",
-  "daymark_moon_setting": "Луната залязва. Зората е близо."
+  "daymark_stars_rising": "Първите звезди изгряват. Пада нощ.",
+  "daymark_stars_night": "Звездите се въртят над главата. Нощ.",
+  "daymark_stars_midnight": "Звездите светят най-ярко. Полунощ.",
+  "daymark_stars_sinking": "Звездите продължават своя кръг. Късна нощ.",
+  "daymark_stars_setting": "Звездите избледняват. Зората е близо.",
+  "daymark_compass_n": "С",
+  "daymark_compass_e": "И",
+  "daymark_compass_s": "Ю",
+  "daymark_compass_w": "З"
 }

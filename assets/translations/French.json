@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Le soleil commence à descendre. Début d'après-midi.",
   "daymark_sun_lateafternoon": "Le soleil est bas. Fin d'après-midi.",
   "daymark_sun_setting": "Le soleil se couche. Soir.",
-  "daymark_moon_rising": "La lune se lève. Tombée de la nuit.",
-  "daymark_moon_night": "La lune monte. Nuit.",
-  "daymark_moon_midnight": "La lune est haute. Minuit.",
-  "daymark_moon_sinking": "La lune descend. Petites heures.",
-  "daymark_moon_setting": "La lune se couche. L'aube approche."
+  "daymark_stars_rising": "Les premières étoiles apparaissent. Tombée de la nuit.",
+  "daymark_stars_night": "Les étoiles tournent au-dessus de toi. Nuit.",
+  "daymark_stars_midnight": "Les étoiles brillent de tout leur éclat. Minuit.",
+  "daymark_stars_sinking": "Les étoiles poursuivent leur ronde. Petites heures.",
+  "daymark_stars_setting": "Les étoiles pâlissent. L'aube approche.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "E",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "O"
 }

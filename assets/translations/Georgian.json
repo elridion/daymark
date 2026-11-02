@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "მზე დახრას იწყებს. ადრეული ნაშუადღევი.",
   "daymark_sun_lateafternoon": "მზე დაბლაა. გვიანი ნაშუადღევი.",
   "daymark_sun_setting": "მზე ჩადის. საღამო.",
-  "daymark_moon_rising": "მთვარე ამოდის. ღამე დგება.",
-  "daymark_moon_night": "მთვარე მაღლა იწევს. ღამე.",
-  "daymark_moon_midnight": "მთვარე მაღლაა. შუაღამე.",
-  "daymark_moon_sinking": "მთვარე იხრება. გვიანი ღამე.",
-  "daymark_moon_setting": "მთვარე ჩადის. განთიადი ახლოსაა."
+  "daymark_stars_rising": "პირველი ვარსკვლავები ჩნდება. ღამე დგება.",
+  "daymark_stars_night": "ვარსკვლავები თავზე ტრიალებს. ღამე.",
+  "daymark_stars_midnight": "ვარსკვლავები ყველაზე კაშკაშად ანათებს. შუაღამე.",
+  "daymark_stars_sinking": "ვარსკვლავები ტრიალს განაგრძობს. გვიანი ღამე.",
+  "daymark_stars_setting": "ვარსკვლავები ფერმკრთალდება. განთიადი ახლოსაა.",
+  "daymark_compass_n": "ჩ",
+  "daymark_compass_e": "ა",
+  "daymark_compass_s": "ს",
+  "daymark_compass_w": "დ"
 }

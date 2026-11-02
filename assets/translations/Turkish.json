@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Güneş alçalmaya başladı. Öğleden sonranın başı.",
   "daymark_sun_lateafternoon": "Güneş alçakta. İkindi.",
   "daymark_sun_setting": "Güneş batıyor. Akşam.",
-  "daymark_moon_rising": "Ay doğuyor. Gece çöküyor.",
-  "daymark_moon_night": "Ay yükseliyor. Gece.",
-  "daymark_moon_midnight": "Ay tepede. Gece yarısı.",
-  "daymark_moon_sinking": "Ay alçalıyor. Gecenin geç saatleri.",
-  "daymark_moon_setting": "Ay batıyor. Şafak yakın."
+  "daymark_stars_rising": "İlk yıldızlar beliriyor. Gece çöküyor.",
+  "daymark_stars_night": "Yıldızlar başının üstünde dönüyor. Gece.",
+  "daymark_stars_midnight": "Yıldızlar en parlak hâlinde. Gece yarısı.",
+  "daymark_stars_sinking": "Yıldızlar dönmeye devam ediyor. Gecenin geç saatleri.",
+  "daymark_stars_setting": "Yıldızlar soluyor. Şafak yakın.",
+  "daymark_compass_n": "K",
+  "daymark_compass_e": "D",
+  "daymark_compass_s": "G",
+  "daymark_compass_w": "B"
 }

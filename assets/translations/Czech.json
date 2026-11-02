@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Slunce začíná klesat. Časné odpoledne.",
   "daymark_sun_lateafternoon": "Slunce stojí nízko. Pozdní odpoledne.",
   "daymark_sun_setting": "Slunce zapadá. Večer.",
-  "daymark_moon_rising": "Měsíc vychází. Padá noc.",
-  "daymark_moon_night": "Měsíc stoupá. Noc.",
-  "daymark_moon_midnight": "Měsíc stojí vysoko. Půlnoc.",
-  "daymark_moon_sinking": "Měsíc klesá. Hluboká noc.",
-  "daymark_moon_setting": "Měsíc zapadá. Blíží se úsvit."
+  "daymark_stars_rising": "Vycházejí první hvězdy. Padá noc.",
+  "daymark_stars_night": "Hvězdy se otáčejí nad hlavou. Noc.",
+  "daymark_stars_midnight": "Hvězdy září nejjasněji. Půlnoc.",
+  "daymark_stars_sinking": "Hvězdy krouží dál. Hluboká noc.",
+  "daymark_stars_setting": "Hvězdy blednou. Blíží se úsvit.",
+  "daymark_compass_n": "S",
+  "daymark_compass_e": "V",
+  "daymark_compass_s": "J",
+  "daymark_compass_w": "Z"
 }

@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "Sunce počinje padati. Rano poslijepodne.",
   "daymark_sun_lateafternoon": "Sunce stoji nisko. Kasno poslijepodne.",
   "daymark_sun_setting": "Sunce zalazi. Večer.",
-  "daymark_moon_rising": "Mjesec izlazi. Pada noć.",
-  "daymark_moon_night": "Mjesec se penje. Noć.",
-  "daymark_moon_midnight": "Mjesec stoji visoko. Ponoć.",
-  "daymark_moon_sinking": "Mjesec pada. Sitni sati.",
-  "daymark_moon_setting": "Mjesec zalazi. Zora je blizu."
+  "daymark_stars_rising": "Pojavljuju se prve zvijezde. Pada noć.",
+  "daymark_stars_night": "Zvijezde se okreću iznad glave. Noć.",
+  "daymark_stars_midnight": "Zvijezde sjaje najjače. Ponoć.",
+  "daymark_stars_sinking": "Zvijezde se okreću dalje. Sitni sati.",
+  "daymark_stars_setting": "Zvijezde blijede. Zora je blizu.",
+  "daymark_compass_n": "S",
+  "daymark_compass_e": "I",
+  "daymark_compass_s": "J",
+  "daymark_compass_w": "Z"
 }

@@ -1,7 +1,8 @@
 # Daymark
 
 Valheim mod (BepInEx + Jotunn) that shows a vague time of day when the player looks at the sun or
-the moon. Client-side only.
+up at the stars, and in worlds without a map a compass and a night wisp that leads the player home.
+Client-side; a server may also run it, so the wisp knows ships and portals far away.
 
 Players: install it from a mod manager. Features and settings are on the mod page, whose source is
 [`package/README.md`](package/README.md).
@@ -25,7 +26,7 @@ The build touches nothing outside the repo. To test in game, install the zip wit
 
 | Path | Purpose |
 | --- | --- |
-| `src/` | Plugin source: config and translations, the gaze check |
+| `src/` | Plugin source: config and translations, the gaze check, the compass strip, the night wisp and its route finding (`src/Navigation/`) |
 | `assets/translations/` | Player-facing text, one JSON file per Valheim language |
 | `tools/make_icon.ps1` | Generates `package/icon.png` from game-icons.net |
 | `package/` | Mod page README and icon shipped in the package |

@@ -6,9 +6,13 @@
   "daymark_sun_earlyafternoon": "The sun has begun to sink. Early afternoon.",
   "daymark_sun_lateafternoon": "The sun hangs low. Late afternoon.",
   "daymark_sun_setting": "The sun is setting. Evening.",
-  "daymark_moon_rising": "The moon is rising. Nightfall.",
-  "daymark_moon_night": "The moon climbs. Night.",
-  "daymark_moon_midnight": "The moon stands high. Midnight.",
-  "daymark_moon_sinking": "The moon sinks. The small hours.",
-  "daymark_moon_setting": "The moon is setting. Dawn is near."
+  "daymark_stars_rising": "The first stars come out. Nightfall.",
+  "daymark_stars_night": "The stars turn overhead. Night.",
+  "daymark_stars_midnight": "The stars shine their brightest. Midnight.",
+  "daymark_stars_sinking": "The stars wheel on. The small hours.",
+  "daymark_stars_setting": "The stars are fading. Dawn is near.",
+  "daymark_compass_n": "N",
+  "daymark_compass_e": "E",
+  "daymark_compass_s": "S",
+  "daymark_compass_w": "W"
 }
