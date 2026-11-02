@@ -162,3 +162,18 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   takes to build and a search takes, the route quality (cliffs, rivers, sea routes), the mast and
   portal rings, the directory RPC on a dedicated server, how long the ship scan takes on a big
   world, and routes through hubs and after retagging.
+
+## Dungeon pins
+
+- Worlds with a map only (`!Game.m_noMap`), toggled by `DungeonPins` (default on), read when a
+  pin would be placed. `DungeonPins.Update` remembers the local player's position every frame
+  while outside; the frame `Character.InInterior` turns true (dungeons sit 5 km up), that last
+  outside position is the entrance, at its door. Dying or no player forgets it, so logging in
+  inside a dungeon pins nothing.
+- The pin is `Minimap.AddPin(entrance, PinType.Icon4, label, save: true, isChecked: false)`,
+  skipped when `Minimap.HavePinInRange` finds any pin within `SameEntrance` 10 m (the player's
+  own counts). The label is the localized `Location.m_discoverLabel` of
+  `Location.GetLocation(entrance, false)`, or empty. Saved pins live in the character's map
+  data, the one thing Daymark saves; they stay after uninstalling, as ordinary pins.
+- Not yet confirmed in game: that `Icon4` is the cave icon, that dungeons fill
+  `m_discoverLabel`, and that the last outside position is at the door for every dungeon type.

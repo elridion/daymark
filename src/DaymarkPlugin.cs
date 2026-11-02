@@ -6,7 +6,8 @@ using Jotunn.Utils;
 
 namespace Daymark
 {
-    // Client-side: nothing is saved, and the only message is an optional, read-only request for the
+    // Client-side: nothing is saved in the world (dungeon pins go on the character's own map like
+    // any pin the player places), and the only message is an optional, read-only request for the
     // ship and portal list, so peers and servers without the mod can still connect.
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
     [BepInDependency(Jotunn.Main.ModGuid)]
@@ -24,9 +25,11 @@ namespace Daymark
         public static ConfigEntry<CompassStyle> Compass;
         public static ConfigEntry<float> CompassTime;
         public static ConfigEntry<bool> Wisp;
+        public static ConfigEntry<bool> DungeonPins;
 
         private readonly CompassStrip m_compass = new CompassStrip();
         private readonly NightWisp m_wisp = new NightWisp();
+        private readonly DungeonPins m_dungeonPins = new DungeonPins();
         private SkyGlance m_glance;
 
         private void Awake()
@@ -44,6 +47,8 @@ namespace Daymark
                     new AcceptableValueRange<float>(5f, 600f)));
             Wisp = Config.Bind("Wayfinding", "Wisp", true,
                 "In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar.");
+            DungeonPins = Config.Bind("Wayfinding", "DungeonPins", true,
+                "In worlds with a map, put a pin on the map at a dungeon's entrance when you go in, unless a pin already marks it.");
 
             m_glance = new SkyGlance(m_compass);
             WorldDirectory.Register();
@@ -55,6 +60,7 @@ namespace Daymark
             m_glance.Update();
             m_compass.Update();
             m_wisp.Update();
+            m_dungeonPins.Update();
         }
 
         // Each embedded assets/translations/<Language>.json is named after a Valheim language. Jotunn

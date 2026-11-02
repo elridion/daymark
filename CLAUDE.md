@@ -6,8 +6,10 @@ Daymarks were the landmarks Norse farms read the time from by where the sun stoo
 and no numbers on purpose. In worlds without a map (`Game.m_noMap`) the reading also brings up a
 compass strip, and from nightfall to dawn a wisp stays with the player: it floats over their bed
 at home and leads them there over land, by ship or through portals. The wisp is magic and knows
-every ship and portal; nothing is remembered or saved. Client-side: no prefabs, no Harmony
-patches, nothing saved anywhere. The one network use is optional: a client asks the server for
+every ship and portal; nothing is remembered or saved. In worlds with a map, going into a
+dungeon pins its entrance on the map (`DungeonPins`). Client-side: no prefabs, no Harmony
+patches, nothing saved in the world; the only thing saved at all is those pins, on the
+character's own map like any pin the player places. The one network use is optional: a client asks the server for
 the full ship and portal list, and only a server with Daymark answers.
 
 Stack, build, verification and git workflow are shared by all mods: see `../CLAUDE.md` and
@@ -15,10 +17,11 @@ Stack, build, verification and git workflow are shared by all mods: see `../CLAU
 
 ## Where things are
 
-- `src/DaymarkPlugin.cs` binds config, loads translations and calls `SkyGlance`, `CompassStrip`
-  and `NightWisp` `Update` from its own `Update`; `src/SkyGlance.cs` the gaze check, sun
-  direction and phase tables; `src/CompassStrip.cs` the HUD compass; `src/NightWisp.cs` keeps the
-  wisp there all night.
+- `src/DaymarkPlugin.cs` binds config, loads translations and calls `SkyGlance`, `CompassStrip`,
+  `NightWisp` and `DungeonPins` `Update` from its own `Update`; `src/SkyGlance.cs` the gaze
+  check, sun direction and phase tables; `src/CompassStrip.cs` the HUD compass;
+  `src/NightWisp.cs` keeps the wisp there all night; `src/DungeonPins.cs` the dungeon entrance
+  pins.
 - `src/Navigation/`: `NavGrid.cs` the world map sampled from the world generator,
   `RouteFinder.cs` the two-layer A* (foot and sail, with ship and portal links),
   `WorldDirectory.cs` every ship and portal with its current connection (with the server RPC),

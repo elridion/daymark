@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Worlds with a map: going into a dungeon pins its entrance on your map, named after the place
+  when the game names it, unless a pin already marks it. The new `DungeonPins` setting turns it
+  off.
+
 ## 0.2.0
 
 - At night, look up at the stars instead of the moon: any steady look well up into open sky tells
