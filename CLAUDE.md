@@ -6,8 +6,8 @@ Daymarks were the landmarks Norse farms read the time from by where the sun stoo
 and no numbers on purpose. In worlds without a map (`Game.m_noMap`) the reading also brings up a
 compass strip, and from nightfall to dawn a wisp stays with the player: it floats over their bed
 at home and leads them there over land, by ship or through portals. The wisp is magic and knows
-every ship and portal; nothing is remembered or saved. In worlds with a map, going into a
-dungeon pins its entrance on the map (`DungeonPins`). Client-side: no prefabs, no Harmony
+every ship and portal; nothing is remembered or saved. Optionally (`DungeonPins`, off by
+default), going into a dungeon pins its entrance on the map. Client-side: no prefabs, no Harmony
 patches, nothing saved in the world; the only thing saved at all is those pins, on the
 character's own map like any pin the player places. The one network use is optional: a client asks the server for
 the full ship and portal list, and only a server with Daymark answers.

@@ -67,10 +67,11 @@ With the map on, none of this appears.
 
 ## Dungeon pins
 
-In worlds with a map, going into a dungeon (burial chambers, caves, crypts and the like) puts a
-cave pin on your map at its entrance, named after the place when the game gives it a name. If a
-pin already marks that entrance, yours or an earlier one, no second pin is added. They are
-ordinary pins: rename or remove them as you like. `DungeonPins` turns this off.
+Off by default: set `DungeonPins` to `true`. Then going into a dungeon (burial chambers, caves,
+crypts and the like) puts a hammer pin on your map at its entrance, named after the place when
+the game gives it a name. If a pin already marks that entrance, yours or an earlier one, no
+second pin is added. They are ordinary pins: rename or remove them as you like. In worlds
+without a map the pins are kept too and show once the map is turned on.
 
 ## Configuration
 
@@ -83,7 +84,7 @@ ordinary pins: rename or remove them as you like. `DungeonPins` turns this off.
 | `Compass` | Runes | Compass shown in worlds without a map: `Runes`, `Letters` or `Off` |
 | `CompassTime` | 60 | Seconds the compass stays on screen after reading the sky (5-600) |
 | `Wisp` | true | In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar |
-| `DungeonPins` | true | In worlds with a map, pin a dungeon's entrance on the map when you go in, unless a pin already marks it |
+| `DungeonPins` | false | Pin a dungeon's entrance on the map when you go in, unless a pin already marks it |
 
 ## Languages
 

@@ -165,15 +165,17 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
 
 ## Dungeon pins
 
-- Worlds with a map only (`!Game.m_noMap`), toggled by `DungeonPins` (default on), read when a
-  pin would be placed. `DungeonPins.Update` remembers the local player's position every frame
+- Toggled by `DungeonPins` (default off, the user's choice), read when a pin would be placed.
+  Placed in every world, nomap included: the character keeps the pin and it shows once the map
+  is on. `DungeonPins.Update` remembers the local player's position every frame
   while outside; the frame `Character.InInterior` turns true (dungeons sit 5 km up), that last
   outside position is the entrance, at its door. Dying or no player forgets it, so logging in
   inside a dungeon pins nothing.
-- The pin is `Minimap.AddPin(entrance, PinType.Icon4, label, save: true, isChecked: false)`,
+- The pin is `Minimap.AddPin(entrance, PinType.Icon2, label, save: true, isChecked: false)`,
   skipped when `Minimap.HavePinInRange` finds any pin within `SameEntrance` 10 m (the player's
   own counts). The label is the localized `Location.m_discoverLabel` of
   `Location.GetLocation(entrance, false)`, or empty. Saved pins live in the character's map
   data, the one thing Daymark saves; they stay after uninstalling, as ordinary pins.
-- Not yet confirmed in game: that `Icon4` is the cave icon, that dungeons fill
+- Not yet confirmed in game: that `Icon2` is the hammer (Mjolnir) icon the user asked for, that
+  `AddPin` works in a nomap world, that dungeons fill
   `m_discoverLabel`, and that the last outside position is at the door for every dungeon type.

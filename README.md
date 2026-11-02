@@ -2,7 +2,7 @@
 
 Valheim mod (BepInEx + Jotunn) that shows a vague time of day when the player looks at the sun or
 up at the stars, and in worlds without a map a compass and a night wisp that leads the player home.
-In worlds with a map it pins dungeon entrances as the player goes in.
+Optionally it pins dungeon entrances on the map as the player goes in.
 Client-side; a server may also run it, so the wisp knows ships and portals far away.
 
 Players: install it from a mod manager. Features and settings are on the mod page, whose source is

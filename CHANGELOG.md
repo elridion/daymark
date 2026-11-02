@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-- Worlds with a map: going into a dungeon pins its entrance on your map, named after the place
-  when the game names it, unless a pin already marks it. The new `DungeonPins` setting turns it
-  off.
+- New `DungeonPins` setting, off by default: going into a dungeon pins its entrance on your map
+  with the hammer icon, named after the place when the game names it, unless a pin already marks
+  it. In worlds without a map the pins show once the map is turned on.
 
 ## 0.2.0
 

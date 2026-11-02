@@ -47,8 +47,8 @@ namespace Daymark
                     new AcceptableValueRange<float>(5f, 600f)));
             Wisp = Config.Bind("Wayfinding", "Wisp", true,
                 "In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar.");
-            DungeonPins = Config.Bind("Wayfinding", "DungeonPins", true,
-                "In worlds with a map, put a pin on the map at a dungeon's entrance when you go in, unless a pin already marks it.");
+            DungeonPins = Config.Bind("Wayfinding", "DungeonPins", false,
+                "Put a pin on the map at a dungeon's entrance when you go in, unless a pin already marks it. In worlds without a map it shows once the map is on.");
 
             m_glance = new SkyGlance(m_compass);
             WorldDirectory.Register();
