@@ -87,7 +87,8 @@ metal goes on your map:
 | Ancient armor and ancient swords (Mistlands) | Iron |
 
 Small rocks you empty in one go (tin, obsidian), the flametal veins riding the Lavaiathans and
-muddy scrap piles get no pin. A deposit you already pinned says "Pin already exists". These too
+muddy scrap piles get no pin. Once a deposit has its pin the hint goes away, and holding the key
+there again only says "Pin already exists". These too
 are ordinary pins, kept in worlds without a map.
 
 ## Configuration

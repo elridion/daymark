@@ -206,7 +206,10 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   added", or returns false for a same-name pin within 1 m, then `$msg_pin_exist` is shown.
 - The hint is a postfix on the private `Hud.UpdateCrosshair` (by string name), appending
   `[$KEY_Use] $daymark_deposit_pin` to `m_hoverName` with vanilla's gamepad sprite rewrite. Daymark's
-  only Harmony patch.
+  only Harmony patch. It is left out once the deposit has its pin (the user's request): vanilla's
+  private `Minimap.HaveSimilarPin` (same name and icon within 1 m, through a cached
+  `AccessTools.MethodDelegate`) is checked once per hover object, not every frame, and set
+  directly when a pin is placed; removing the pin brings the hint back on the next look.
 - Not yet confirmed in game: the prefab names, that every listed deposit is hovered within reach
   (big meshes: the root position may be metres from the crosshair point), the hint layout, and
   the dot icon.

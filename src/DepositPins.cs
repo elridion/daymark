@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
@@ -39,9 +40,16 @@ namespace Daymark
             { "giant_sword2_destruction", "$item_iron" },
         };
 
+        // Private in vanilla: the publicized build compiles a direct call, but the game throws
+        // MethodAccessException on it. The same test DiscoverLocation uses to skip a second pin.
+        private static readonly Func<Minimap, Vector3, Minimap.PinType, string, bool, bool> s_haveSimilarPin =
+            AccessTools.MethodDelegate<Func<Minimap, Vector3, Minimap.PinType, string, bool, bool>>(
+                AccessTools.Method(typeof(Minimap), "HaveSimilarPin"));
+
         private static GameObject s_lastHover;
         private static ZNetView s_lastDeposit;
         private static string s_lastLabel;
+        private static bool s_lastPinned;
 
         private ZNetView m_held;
         private float m_heldTime;
@@ -80,7 +88,14 @@ namespace Daymark
             // "Pin added" message, or adds nothing when this deposit already has its pin.
             if (!Minimap.instance.DiscoverLocation(deposit.transform.position, PinIcon, name, false))
                 player.Message(MessageHud.MessageType.Center, "$msg_pin_exist");
+            s_lastPinned = true;
         }
+
+        /// <summary>
+        /// True when the hovered deposit already has its pin. Checked once per hover object (a pin
+        /// removed on the map while looking at the deposit shows the hint again on the next look).
+        /// </summary>
+        public static bool IsHoveredPinned() => s_lastPinned;
 
         /// <summary>The deposit under the crosshair within reach, or null.</summary>
         public static ZNetView GetHoveredDeposit(Player player, out string label)
@@ -98,6 +113,8 @@ namespace Daymark
                     s_lastDeposit = view;
                     s_lastLabel = found;
                 }
+                s_lastPinned = s_lastDeposit && Minimap.instance && s_haveSimilarPin(Minimap.instance,
+                    s_lastDeposit.transform.position, PinIcon, Localization.instance.Localize(s_lastLabel), true);
             }
             label = s_lastLabel;
             return s_lastDeposit;
@@ -119,7 +136,7 @@ namespace Daymark
         private static void AddHint(Hud __instance, Player player)
         {
             if (!DaymarkPlugin.DepositPins.Value || !player) return;
-            if (!DepositPins.GetHoveredDeposit(player, out _)) return;
+            if (!DepositPins.GetHoveredDeposit(player, out _) || DepositPins.IsHoveredPinned()) return;
             string text = __instance.m_hoverName.text;
             string hint = Localization.instance.Localize(Hint);
             // As vanilla does for every hover text: a gamepad button sprite goes without brackets.
