@@ -13,6 +13,9 @@ namespace Daymark
     {
         // Any pin this close to the entrance already marks it, the player's own included.
         private const float SameEntrance = 10f;
+        // How far from the last outside position the door just used can be: the player steps into
+        // its trigger, so a few metres at most.
+        private const float EntranceReach = 15f;
         // The hammer (Mjolnir) icon of vanilla's map pin choices.
         private const Minimap.PinType PinIcon = Minimap.PinType.Icon2;
 
@@ -54,13 +57,36 @@ namespace Daymark
             // map is turned on.
             if (!DaymarkPlugin.DungeonPins.Value || !Minimap.instance) return;
             if (s_havePinInRange(Minimap.instance, entrance, SameEntrance)) return;
-            Location location = Location.GetLocation(entrance, false);
-            string label = location && !string.IsNullOrEmpty(location.m_discoverLabel)
-                ? Localization.instance.Localize(location.m_discoverLabel)
-                : "";
+            string label = EntranceName(entrance);
+            if (label.Length == 0)
+            {
+                Location location = Location.GetLocation(entrance, false);
+                if (location && !string.IsNullOrEmpty(location.m_discoverLabel)) label = location.m_discoverLabel;
+            }
+            label = Localization.instance.Localize(label);
             // The same call a Vegvisir's answer ends in for a boss: it adds the saved pin and shows
             // vanilla's "Pin added" message, without opening the map at it (showMap false).
             Minimap.instance.DiscoverLocation(entrance, PinIcon, label, false);
+        }
+
+        // The dungeon's name is the banner its door shows on the way in (Teleport.m_enterText,
+        // "$location_forestcrypt" for Burial Chambers); the location's own m_discoverLabel is empty
+        // for dungeons. The nearest named door that leads into an interior within EntranceReach of
+        // the last outside position is the one just used. Runs once per entry, so a scene search is fine.
+        private static string EntranceName(Vector3 entrance)
+        {
+            string name = "";
+            float best = EntranceReach * EntranceReach;
+            foreach (Teleport door in UnityEngine.Object.FindObjectsByType<Teleport>(FindObjectsSortMode.None))
+            {
+                if (!door || string.IsNullOrEmpty(door.m_enterText) || !door.m_targetPoint) continue;
+                if (!Character.InInterior(door.m_targetPoint.transform.position)) continue;
+                float distance = (door.transform.position - entrance).sqrMagnitude;
+                if (distance >= best) continue;
+                best = distance;
+                name = door.m_enterText;
+            }
+            return name;
         }
     }
 }

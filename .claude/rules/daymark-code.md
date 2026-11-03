@@ -192,13 +192,17 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   `showMap` true it would open the map at the pin instead). It is skipped beforehand when `Minimap.HavePinInRange` finds any pin within `SameEntrance` 10 m (the player's
   own counts); that method is private, so it is called through a cached
   `AccessTools.MethodDelegate` (the first build called it directly and every dungeon entry threw
-  `MethodAccessException` in game, 2026-11-03). The label is the localized `Location.m_discoverLabel` of
-  `Location.GetLocation(entrance, false)`, or empty. Saved pins live in the character's map
+  `MethodAccessException` in game, 2026-11-03). The label is the localized `Teleport.m_enterText` of the nearest
+  door within `EntranceReach` 15 m whose `m_targetPoint` is inside (the banner vanilla shows on
+  the way in, `$location_forestcrypt` "Burial Chambers"), found with one `FindObjectsByType` per
+  entry; failing that `Location.m_discoverLabel` of `Location.GetLocation(entrance, false)`, or
+  empty. The first build used only `m_discoverLabel`, which dungeons leave empty: pins came out
+  unnamed in game (2026-11-03). Saved pins live in the character's map
   data, the one thing Daymark saves; they stay after uninstalling, as ordinary pins.
 - Confirmed in game by the user (2026-11-03): a pin shows up on entering a dungeon.
 - Not yet confirmed in game: that `Icon2` is the hammer (Mjolnir) icon the user asked for, that
-  `AddPin` works in a nomap world, that dungeons fill
-  `m_discoverLabel`, and that the last outside position is at the door for every dungeon type.
+  `AddPin` works in a nomap world, that the door's `m_enterText` names every dungeon type, and that
+  the last outside position is at the door for every dungeon type.
 
 ## Deposit pins
 
