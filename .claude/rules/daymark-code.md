@@ -52,7 +52,17 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   (`s_markColor`, darkened from cream on 2026-11-02 at the user's request), north in ember red
   (`s_northColor`). Facing is the camera's
   `eulerAngles.y` (the camera never rolls, so it holds while looking straight up); north is +Z,
-  as on vanilla's map. It stays `CompassTime` seconds, then fades over `FadeTime`.
+  as on vanilla's map.
+- The compass drifts like dead reckoning (the user's design, 2026-11-03, replacing the 0.2.0
+  `CompassTime` timer, which felt arbitrary): `Reckon` adds up horizontal distance travelled
+  since the reading, and every quarter of `CompassDistance` (default 1000 m) one point is lost:
+  its label crossfades over `PointFadeTime` 3 s into a stroke the length of the intercardinal
+  ticks (an extra stroke mark per point). The point lost is the one travelled towards least
+  (each step's distance goes to the point nearest its bearing); with no travel that way, the one
+  furthest from the camera's facing. Standing still loses nothing. Death, `InInterior`,
+  `IsTeleporting` or a jump over `TeleportJump` 100 m in one frame loses all four. With all lost,
+  the last label finishes turning into its stroke, then the strip fades over `FadeTime`. A new
+  reading restores all four (instantly if the strip was hidden, crossfading back otherwise).
 - Runes use vanilla `Valheim-Rune` (found like Hearthfire's `RuneFont`), which draws Latin letters
   as Elder Futhark: "n a s w" give ᚾ ᚨ ᛊ ᚹ, the first runes of norðr, austr, suðr, vestr. Without
   the font it warns and uses letters. Letters use `Hud.m_hoverName`'s font.

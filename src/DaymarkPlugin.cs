@@ -25,7 +25,7 @@ namespace Daymark
         public static ConfigEntry<float> GazeAngle;
         public static ConfigEntry<float> GazeTime;
         public static ConfigEntry<CompassStyle> Compass;
-        public static ConfigEntry<float> CompassTime;
+        public static ConfigEntry<float> CompassDistance;
         public static ConfigEntry<bool> Wisp;
         public static ConfigEntry<bool> DungeonPins;
         public static ConfigEntry<bool> DepositPins;
@@ -48,9 +48,9 @@ namespace Daymark
                     new AcceptableValueRange<float>(0f, 5f)));
             Compass = Config.Bind("Wayfinding", "Compass", CompassStyle.Runes,
                 "In worlds without a map, the compass strip shown after reading the sky: Runes (Old Norse ᚾ ᚨ ᛊ ᚹ), Letters (compass points in your language) or Off.");
-            CompassTime = Config.Bind("Wayfinding", "CompassTime", 60f,
-                new ConfigDescription("Seconds the compass stays on screen after reading the sky.",
-                    new AcceptableValueRange<float>(5f, 600f)));
+            CompassDistance = Config.Bind("Wayfinding", "CompassDistance", 1000f,
+                new ConfigDescription("Metres you can travel after reading the sky before the compass has lost all four points: every quarter of it, one point turns into a plain stroke. A portal, a dungeon or death loses them all.",
+                    new AcceptableValueRange<float>(100f, 5000f)));
             Wisp = Config.Bind("Wayfinding", "Wisp", true,
                 "In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar.");
             DungeonPins = Config.Bind("Wayfinding", "DungeonPins", false,

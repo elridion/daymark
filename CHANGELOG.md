@@ -10,6 +10,10 @@
 - New `DepositPins` setting, off by default: hold the use key on a copper deposit, silver vein or
   Mistlands ancient armor or sword to pin it on your map as Copper, Silver or Iron. The deposit
   shows the hint under its name until it has its pin.
+- The compass no longer disappears after a minute. It drifts as you travel instead: every 250 m
+  one compass point turns into a plain stroke, the direction you travelled towards least first,
+  and with all four gone it fades. A portal, a dungeon or death loses them all. The
+  `CompassTime` setting is replaced by `CompassDistance` (metres, default 1000).
 
 ## 0.2.0
 
