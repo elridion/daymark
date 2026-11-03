@@ -49,7 +49,7 @@ namespace Daymark
             Compass = Config.Bind("Wayfinding", "Compass", CompassStyle.Runes,
                 "In worlds without a map, the compass strip shown after reading the sky: Runes (Old Norse ᚾ ᚨ ᛊ ᚹ), Letters (compass points in your language) or Off.");
             CompassDistance = Config.Bind("Wayfinding", "CompassDistance", 1000f,
-                new ConfigDescription("Metres you can travel after reading the sky before the compass has lost all four points: every quarter of it, one point turns into a plain stroke. A portal, a dungeon or death loses them all.",
+                new ConfigDescription("Metres of travel after reading the sky for each compass point to be lost: every this many metres, one point turns into a plain stroke, and with all four gone the compass fades. A portal, a dungeon or death loses them all.",
                     new AcceptableValueRange<float>(100f, 5000f)));
             Wisp = Config.Bind("Wayfinding", "Wisp", true,
                 "In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar.");

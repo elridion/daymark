@@ -55,7 +55,8 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   as on vanilla's map.
 - The compass drifts like dead reckoning (the user's design, 2026-11-03, replacing the 0.2.0
   `CompassTime` timer, which felt arbitrary): `Reckon` adds up horizontal distance travelled
-  since the reading, and every quarter of `CompassDistance` (default 1000 m) one point is lost:
+  since the reading, and every `CompassDistance` (metres per point, default 1000 m; 250 m per
+  point was too short for the user) one point is lost:
   its label crossfades over `PointFadeTime` 3 s into a stroke the length of the intercardinal
   ticks (an extra stroke mark per point). The point lost is the one travelled towards least
   (each step's distance goes to the point nearest its bearing); with no travel that way, the one

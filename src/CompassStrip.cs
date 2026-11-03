@@ -14,7 +14,7 @@ namespace Daymark
     /// <summary>
     /// A strip at the top of the screen whose compass points slide past as the camera turns, shown
     /// after the player reads the sky in a world without a map. Like dead reckoning it drifts: every
-    /// quarter of <c>CompassDistance</c> travelled, one point's rune or letter turns into a plain
+    /// <c>CompassDistance</c> travelled, one point's rune or letter turns into a plain
     /// stroke, the point the player travelled towards least going first, and with all four lost the
     /// strip fades. A portal, a dungeon or death loses them all at once. It hangs under the HUD root,
     /// which vanilla hides by moving it off screen, so it hides with the rest of the HUD.
@@ -133,8 +133,8 @@ namespace Daymark
             }
         }
 
-        // Adds up the distance travelled since the reading and loses a point every quarter of
-        // CompassDistance; anything that takes the player away at once loses them all.
+        // Adds up the distance travelled since the reading and loses a point every CompassDistance;
+        // anything that takes the player away at once loses them all.
         private void Reckon(Player player)
         {
             if (!player || player.IsDead() || player.InInterior() || player.IsTeleporting())
@@ -164,7 +164,7 @@ namespace Daymark
             m_lastPosition = position;
             m_tracking = true;
 
-            float perPoint = DaymarkPlugin.CompassDistance.Value / 4f;
+            float perPoint = DaymarkPlugin.CompassDistance.Value;
             while (m_lost < 4 && m_drift >= perPoint * (m_lost + 1))
                 LoseOne();
         }

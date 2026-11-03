@@ -44,8 +44,8 @@ In worlds played with the "no map" setting, the sky also helps you find your way
   turn. By default it shows the first runes of the Old Norse words for north, east, south and
   west (ᚾ ᚨ ᛊ ᚹ), with north in red; set `Compass` to `Letters` for the compass points of your own
   language, or to `Off`.
-- The bearing drifts as you travel, as when finding your way by reckoning: every 250 m (a quarter
-  of `CompassDistance`) one point turns into a plain stroke, the direction you travelled towards
+- The bearing drifts as you travel, as when finding your way by reckoning: every 1000 m (set by
+  `CompassDistance`) one point turns into a plain stroke, the direction you travelled towards
   least going first, so the one you are heading for is kept longest. Standing still loses nothing.
   With all four gone the compass fades; read the sky again to get them back. A portal, a dungeon
   or death loses them all at once.
@@ -105,7 +105,7 @@ are ordinary pins, kept in worlds without a map.
 | `GazeAngle` | 6 | How close to the sun you must look, in degrees from the centre of the screen; at night any look well up at the stars counts (2-20) |
 | `GazeTime` | 0.75 | Seconds you must keep looking before the time of day is shown (0-5) |
 | `Compass` | Runes | Compass shown in worlds without a map: `Runes`, `Letters` or `Off` |
-| `CompassDistance` | 1000 | Metres you can travel after reading the sky before the compass has lost all four points, one every quarter (100-5000) |
+| `CompassDistance` | 1000 | Metres of travel after reading the sky for each compass point to turn into a plain stroke (100-5000) |
 | `Wisp` | true | In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar |
 | `DungeonPins` | false | Pin a dungeon's entrance on the map when you go in, unless a pin already marks it |
 | `DepositPins` | false | Hold the use key on a copper deposit, silver vein or ancient armor or sword to pin it on the map, named after its metal |
