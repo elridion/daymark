@@ -23,7 +23,11 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   than vegetation (a `TreeBase`, or a `Destructible` of type `Tree`: bushes, stumps), and not in
   an `m_alwaysDark` environment (Mistlands). Vegetation was ignored after testing (2026-11-02):
   a crown is one solid collider, so any canopy, or a forest on the horizon at a low sun, hid the
-  sky. A full hit buffer (`MaxHits` 32) counts as blocked. Weather is ignored, so overcast nights still count. Menus, map, inventory, text
+  sky. Triggers are ignored (`QueryTriggerInteraction.Ignore`). A full hit buffer (`MaxHits` 32)
+  carries on from just past its farthest hit, up to `MaxPasses` 8 buffers, then counts as blocked;
+  before 2026-11-03 a full buffer counted as blocked at once and the user saw no reading in the
+  Black Forest (fixed together with the triggers, confirmed in game; the log did not show which of
+  the two it was). Weather is ignored, so overcast nights still count. Menus, map, inventory, text
   input, console and the radial menu suppress it.
 - Combat suppresses it: the player counts as in combat while `Player.IsTargeted()` (the signal
   that starts vanilla's combat music) or within `CalmTime` (5 s) of their own last attack

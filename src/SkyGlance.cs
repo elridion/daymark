@@ -28,6 +28,8 @@ namespace Daymark
         private const float CalmTime = 5f;
         // Room for every hit along one sight line through a forest.
         private const int MaxHits = 32;
+        // Buffers' worth of forest a sight line may cross before it counts as blocked.
+        private const int MaxPasses = 8;
 
         // Seconds since the player's last attack; protected on Humanoid, reset by StartAttack.
         private static readonly AccessTools.FieldRef<Humanoid, float> s_lastCombatTimer =
@@ -143,12 +145,26 @@ namespace Daymark
         {
             if (m_occlusionMask == 0)
                 m_occlusionMask = LayerMask.GetMask("Default", "static_solid", "Default_small", "piece", "terrain", "vehicle");
-            int count = Physics.RaycastNonAlloc(from, direction, m_hits, OcclusionRange, m_occlusionMask);
-            // A full buffer may have left a solid hit out behind all that vegetation.
-            if (count == m_hits.Length) return true;
-            for (int i = 0; i < count; i++)
-                if (!Vegetation(m_hits[i].collider)) return true;
-            return false;
+            float range = OcclusionRange;
+            for (int pass = 0; pass < MaxPasses; pass++)
+            {
+                // Triggers (spawn and effect areas, location bounds) are invisible and never hide the sky.
+                int count = Physics.RaycastNonAlloc(from, direction, m_hits, range, m_occlusionMask, QueryTriggerInteraction.Ignore);
+                float farthest = 0f;
+                for (int i = 0; i < count; i++)
+                {
+                    if (!Vegetation(m_hits[i].collider)) return true;
+                    farthest = Mathf.Max(farthest, m_hits[i].distance);
+                }
+                if (count < m_hits.Length) return false;
+                // A full buffer may have left a solid hit out behind all that forest: the hits come
+                // unsorted, so carry on from just past the farthest one.
+                float step = farthest + 0.05f;
+                from += direction * step;
+                range -= step;
+                if (range <= 0f) return false;
+            }
+            return true;
         }
 
         private static bool Vegetation(Collider collider)
