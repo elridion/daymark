@@ -5,6 +5,9 @@
 - New `DungeonPins` setting, off by default: going into a dungeon pins its entrance on your map
   with the hammer icon, named after the place when the game names it, unless a pin already marks
   it. The game says "Pin added", as when a Vegvisir marks a boss. In worlds without a map the pins show once the map is turned on.
+- New `DepositPins` setting, off by default: hold the use key on a copper deposit, silver vein or
+  Mistlands ancient armor or sword to pin it on your map as Copper, Silver or Iron. The deposit
+  shows the hint under its name.
 
 ## 0.2.0
 

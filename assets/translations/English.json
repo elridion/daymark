@@ -14,5 +14,6 @@
   "daymark_compass_n": "N",
   "daymark_compass_e": "E",
   "daymark_compass_s": "S",
-  "daymark_compass_w": "W"
+  "daymark_compass_w": "W",
+  "daymark_deposit_pin": "Hold: pin on map"
 }

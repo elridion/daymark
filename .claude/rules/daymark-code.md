@@ -33,7 +33,7 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   logged) and re-arms after the gaze has been away for a second.
 - The check runs every 0.1 s from the plugin's `Update`: keep it allocation-free.
 - Localization keys: `daymark_sun_*` (seven day phases), `daymark_stars_*` (five night phases),
-  `daymark_compass_n/e/s/w` (compass point initials).
+  `daymark_compass_n/e/s/w` (compass point initials), `daymark_deposit_pin` (the deposit hint).
 
 ## Worlds without a map
 
@@ -180,6 +180,33 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   `MethodAccessException` in game, 2026-11-03). The label is the localized `Location.m_discoverLabel` of
   `Location.GetLocation(entrance, false)`, or empty. Saved pins live in the character's map
   data, the one thing Daymark saves; they stay after uninstalling, as ordinary pins.
+- Confirmed in game by the user (2026-11-03): a pin shows up on entering a dungeon.
 - Not yet confirmed in game: that `Icon2` is the hammer (Mjolnir) icon the user asked for, that
   `AddPin` works in a nomap world, that dungeons fill
   `m_discoverLabel`, and that the last outside position is at the door for every dungeon type.
+
+## Deposit pins
+
+- Toggled by `DepositPins` (default off), read live. Which deposits count is a rule agreed with
+  the user (2026-11-03): big deposits mined node by node, yielding metal, in the open world, that
+  stay put. In: copper deposit (`rock4_copper`), silver vein (`silvervein`), ancient armor
+  (`giant_helmet1/2`) and ancient sword (`giant_sword1/2`), each with its fractured prefab
+  (`_frac`, `_destruction`), which vanilla spawns at the same position on the first hit. Out:
+  tin and obsidian (single small `MineRock`s), the flametal vein (on a Lavaiathan that sinks), the
+  iron vein (console only), muddy scrap piles (crypt ones are covered by dungeon pins; the user
+  left the buried swamp ones out). Prefab names are from the wiki; a new deposit means a new row in
+  `s_deposits` and the README table.
+- Label: the vanilla metal name (`$item_copper`, `$item_silver`, `$item_iron`; ancient remains
+  drop scrap iron and copper scrap, pinned as Iron), localized when placed. Icon `Icon3`, the dot.
+- The deposit is `Player.GetHoverObject()` (any collider within interact reach, Hoverable or not)
+  up to its `ZNetView`, by prefab name, cached per hover object. Use (`Use`/`JoyUse`) held
+  `HoldTime` 0.6 s on the same deposit places the pin, then waits for release. Deposits have no
+  `Interactable`, so vanilla's own hold-interact does nothing there. Placed with
+  `Minimap.DiscoverLocation(..., showMap: false)` at the deposit's root position: it shows "Pin
+  added", or returns false for a same-name pin within 1 m, then `$msg_pin_exist` is shown.
+- The hint is a postfix on the private `Hud.UpdateCrosshair` (by string name), appending
+  `[$KEY_Use] $daymark_deposit_pin` to `m_hoverName` with vanilla's gamepad sprite rewrite. Daymark's
+  only Harmony patch.
+- Not yet confirmed in game: the prefab names, that every listed deposit is hovered within reach
+  (big meshes: the root position may be metres from the crosshair point), the hint layout, and
+  the dot icon.

@@ -74,6 +74,22 @@ boss. If a pin already marks that entrance, yours or an earlier one, no
 second pin is added. They are ordinary pins: rename or remove them as you like. In worlds
 without a map the pins are kept too and show once the map is turned on.
 
+## Deposit pins
+
+Off by default: set `DepositPins` to `true`. Then the big ore deposits you come back to show
+"Hold E: pin on map" under their name; hold the use key for a moment and a dot pin named after the
+metal goes on your map:
+
+| Deposit | Pin |
+| --- | --- |
+| Copper deposit (Black Forest) | Copper |
+| Silver vein (Mountains) | Silver |
+| Ancient armor and ancient swords (Mistlands) | Iron |
+
+Small rocks you empty in one go (tin, obsidian), the flametal veins riding the Lavaiathans and
+muddy scrap piles get no pin. A deposit you already pinned says "Pin already exists". These too
+are ordinary pins, kept in worlds without a map.
+
 ## Configuration
 
 `BepInEx/config/elridion.daymark.cfg`. Each player sets their own values.
@@ -86,6 +102,7 @@ without a map the pins are kept too and show once the map is turned on.
 | `CompassTime` | 60 | Seconds the compass stays on screen after reading the sky (5-600) |
 | `Wisp` | true | In worlds without a map, a wisp stays with you at night: it floats over your bed at home and leads you there from afar |
 | `DungeonPins` | false | Pin a dungeon's entrance on the map when you go in, unless a pin already marks it |
+| `DepositPins` | false | Hold the use key on a copper deposit, silver vein or ancient armor or sword to pin it on the map, named after its metal |
 
 ## Languages
 
@@ -104,8 +121,8 @@ too; without it, it knows only those your game has already loaded nearby.
 
 ## Uninstalling
 
-Remove the mod from your mod manager. It saves nothing in your world. Dungeon pins it placed
-stay on your character's map as ordinary pins.
+Remove the mod from your mod manager. It saves nothing in your world. Dungeon and deposit pins
+it placed stay on your character's map as ordinary pins.
 
 ## Credits
 

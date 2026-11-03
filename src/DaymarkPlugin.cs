@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using BepInEx;
 using BepInEx.Configuration;
+using HarmonyLib;
 using Jotunn.Managers;
 using Jotunn.Utils;
 
@@ -27,10 +28,13 @@ namespace Daymark
         public static ConfigEntry<float> CompassTime;
         public static ConfigEntry<bool> Wisp;
         public static ConfigEntry<bool> DungeonPins;
+        public static ConfigEntry<bool> DepositPins;
 
         private readonly CompassStrip m_compass = new CompassStrip();
         private readonly NightWisp m_wisp = new NightWisp();
         private readonly DungeonPins m_dungeonPins = new DungeonPins();
+        private readonly DepositPins m_depositPins = new DepositPins();
+        private Harmony _harmony;
         private SkyGlance m_glance;
         private Feature[] m_features;
 
@@ -52,6 +56,9 @@ namespace Daymark
             DungeonPins = Config.Bind("Wayfinding", "DungeonPins", false,
                 "Put a pin on the map at a dungeon's entrance when you go in, unless a pin already marks it. In worlds without a map it shows once the map is on.");
 
+            DepositPins = Config.Bind("Wayfinding", "DepositPins", false,
+                "Hold the use key on a copper deposit, silver vein or ancient armor or sword to pin it on the map, named after its metal.");
+
             m_glance = new SkyGlance(m_compass);
             m_features = new[]
             {
@@ -59,7 +66,10 @@ namespace Daymark
                 new Feature { m_name = "compass", m_update = m_compass.Update },
                 new Feature { m_name = "night wisp", m_update = m_wisp.Update },
                 new Feature { m_name = "dungeon pins", m_update = m_dungeonPins.Update },
+                new Feature { m_name = "deposit pins", m_update = m_depositPins.Update },
             };
+            _harmony = new Harmony(PluginGuid);
+            _harmony.PatchAll(typeof(DaymarkPlugin).Assembly);
             WorldDirectory.Register();
             AddLocalizations();
         }
@@ -80,6 +90,11 @@ namespace Daymark
                     Jotunn.Logger.LogError($"Daymark {m_features[i].m_name} stopped after an error: {e}");
                 }
             }
+        }
+
+        private void OnDestroy()
+        {
+            _harmony?.UnpatchSelf();
         }
 
         private struct Feature
