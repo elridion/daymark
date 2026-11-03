@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using BepInEx;
 using BepInEx.Configuration;
@@ -31,6 +32,7 @@ namespace Daymark
         private readonly NightWisp m_wisp = new NightWisp();
         private readonly DungeonPins m_dungeonPins = new DungeonPins();
         private SkyGlance m_glance;
+        private Feature[] m_features;
 
         private void Awake()
         {
@@ -51,16 +53,40 @@ namespace Daymark
                 "Put a pin on the map at a dungeon's entrance when you go in, unless a pin already marks it. In worlds without a map it shows once the map is on.");
 
             m_glance = new SkyGlance(m_compass);
+            m_features = new[]
+            {
+                new Feature { m_name = "sky glance", m_update = m_glance.Update },
+                new Feature { m_name = "compass", m_update = m_compass.Update },
+                new Feature { m_name = "night wisp", m_update = m_wisp.Update },
+                new Feature { m_name = "dungeon pins", m_update = m_dungeonPins.Update },
+            };
             WorldDirectory.Register();
             AddLocalizations();
         }
 
         private void Update()
         {
-            m_glance.Update();
-            m_compass.Update();
-            m_wisp.Update();
-            m_dungeonPins.Update();
+            // A feature that throws logs once and stops, instead of throwing every frame.
+            for (int i = 0; i < m_features.Length; i++)
+            {
+                if (m_features[i].m_failed) continue;
+                try
+                {
+                    m_features[i].m_update();
+                }
+                catch (Exception e)
+                {
+                    m_features[i].m_failed = true;
+                    Jotunn.Logger.LogError($"Daymark {m_features[i].m_name} stopped after an error: {e}");
+                }
+            }
+        }
+
+        private struct Feature
+        {
+            public string m_name;
+            public Action m_update;
+            public bool m_failed;
         }
 
         // Each embedded assets/translations/<Language>.json is named after a Valheim language. Jotunn

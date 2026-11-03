@@ -175,7 +175,9 @@ Adds to the workspace-wide `code-style.md` and `valheim-modding.md` in `../.clau
   false)`, the call a Vegvisir's boss answer ends in (`Game.RPC_DiscoverLocationResponse`): it
   skips a similar pin, adds a saved one and shows vanilla's `$msg_pin_added` message (with
   `showMap` true it would open the map at the pin instead). It is skipped beforehand when `Minimap.HavePinInRange` finds any pin within `SameEntrance` 10 m (the player's
-  own counts). The label is the localized `Location.m_discoverLabel` of
+  own counts); that method is private, so it is called through a cached
+  `AccessTools.MethodDelegate` (the first build called it directly and every dungeon entry threw
+  `MethodAccessException` in game, 2026-11-03). The label is the localized `Location.m_discoverLabel` of
   `Location.GetLocation(entrance, false)`, or empty. Saved pins live in the character's map
   data, the one thing Daymark saves; they stay after uninstalling, as ordinary pins.
 - Not yet confirmed in game: that `Icon2` is the hammer (Mjolnir) icon the user asked for, that

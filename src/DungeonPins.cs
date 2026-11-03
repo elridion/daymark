@@ -1,3 +1,5 @@
+using System;
+using HarmonyLib;
 using UnityEngine;
 
 namespace Daymark
@@ -13,6 +15,12 @@ namespace Daymark
         private const float SameEntrance = 10f;
         // The hammer (Mjolnir) icon of vanilla's map pin choices.
         private const Minimap.PinType PinIcon = Minimap.PinType.Icon2;
+
+        // Private in vanilla: the publicized build compiles a direct call, but the game throws
+        // MethodAccessException on it.
+        private static readonly Func<Minimap, Vector3, float, bool> s_havePinInRange =
+            AccessTools.MethodDelegate<Func<Minimap, Vector3, float, bool>>(
+                AccessTools.Method(typeof(Minimap), "HavePinInRange"));
 
         private Vector3 m_outside;
         private bool m_haveOutside;
@@ -45,7 +53,7 @@ namespace Daymark
             // Worlds without a map get the pin too: the character keeps it, and it shows once the
             // map is turned on.
             if (!DaymarkPlugin.DungeonPins.Value || !Minimap.instance) return;
-            if (Minimap.instance.HavePinInRange(entrance, SameEntrance)) return;
+            if (s_havePinInRange(Minimap.instance, entrance, SameEntrance)) return;
             Location location = Location.GetLocation(entrance, false);
             string label = location && !string.IsNullOrEmpty(location.m_discoverLabel)
                 ? Localization.instance.Localize(location.m_discoverLabel)
