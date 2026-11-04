@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.0
 
 - New `DungeonPins` setting, off by default: going into a dungeon pins its entrance on your map
   with the hammer icon, named after the place when the game names it, unless a pin already marks
