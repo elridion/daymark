@@ -43,10 +43,11 @@ Stack, build, verification and git workflow are shared by all mods: see `../CLAU
   `elridion.daymark!DaymarkDirectory`, Jotunn prefixes the GUID) and its answer layout (portal
   count, then per portal ZDOID, position, rotation, connection ZDOID; ship count, then per ship
   ZDOID and position) must stay readable between versions once released.
-- **Docs follow code.** In the same change, `package/README.md` keeps the phase table in sync with
-  the English translations, the "Worlds without a map" section with `CompassStrip` (runes,
-  duration) and the wisp (`NightWisp`, `WispGuide`, `RouteFinder`) and the settings table with
-  `DaymarkPlugin.Awake`.
+- **Docs follow code.** In the same change, `package/README.md` keeps the settings table in sync
+  with `DaymarkPlugin.Awake` and its features and how-to with the gaze rules, the compass and the
+  wisp. It stays short (the user's call): its first line matches `<PackageDescription>`, then a
+  short feature list, how to use, install notes and the settings. Phase tables and how the wisp
+  routes belong in the changelog and this file, not the store page.
 
 ## Art and licensing
 
