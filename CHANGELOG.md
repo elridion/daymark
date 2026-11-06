@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- No changes in game; this release only updates the mod page.
+
 ## 0.3.0
 
 - New `DungeonPins` setting, off by default: going into a dungeon pins its entrance on your map

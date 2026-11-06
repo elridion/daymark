@@ -18,7 +18,7 @@ namespace Daymark
     {
         public const string PluginGuid = "elridion.daymark";
         public const string PluginName = "Daymark";
-        public const string PluginVersion = "0.3.0";
+        public const string PluginVersion = "0.3.1";
 
         private const string TranslationPrefix = "Daymark.translations.";
 
